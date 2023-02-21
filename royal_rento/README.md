@@ -1,10 +1,10 @@
 # Project_Name :- Royal_Rento 
 
-   ### Logo : - [https://i.ibb.co/c86KqX5/fortunate-fog-6612.jpg]
+   ### `Logo` : - [https://i.ibb.co/c86KqX5/fortunate-fog-6612.jpg]
 
-   ### Project Code :- [fortunate-fog-6612]
+   ### `Project Code` :- [fortunate-fog-6612]
 
-   ### Carousel Images :- [https://s.rmjo.in/Valentine%20day%20banner%20Web-2.jpg,https://s.rmjo.in/Fitness-offer-banner-for-Web--2.jpg,https://s.rmjo.in/Paytm-Bank-Desktop-banner-%20(1).jpg,https://s.rmjo.in/WP-Web.png]
+   ### `Carousel Images` :- [https://s.rmjo.in/Valentine%20day%20banner%20Web-2.jpg,https://s.rmjo.in/Fitness-offer-banner-for-Web--2.jpg,https://s.rmjo.in/Paytm-Bank-Desktop-banner-%20(1).jpg,https://s.rmjo.in/WP-Web.png]
 
 
 # Getting Started with Create React App
