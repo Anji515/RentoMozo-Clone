@@ -90,7 +90,7 @@ export default function WithSpeechBubbles() {
             <br />
             happy subscribers</Heading>
             <br />
-          <Text color={'teal'} textDecoration='underline'>Here's what they have some RoyalRento experiences.</Text>
+          <Text color={'teal'} textDecoration='underline'>Here's we have some RoyalRento experiences.</Text>
         </Stack>
         <Stack
           direction={['column','column','column','row','row']}

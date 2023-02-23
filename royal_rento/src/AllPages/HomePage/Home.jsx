@@ -64,7 +64,7 @@ function Home(){
     </SimpleGrid>   
     </Center>
 
-    <div>
+    <Box background='#f5f7fa' paddingLeft={20} paddingRight={20} >
     <Box paddingTop={10}>
     <Heading fontSize={'18px'} marginLeft={'70px'}  textAlign={'left'} >You'll love to
       <br/>
@@ -90,7 +90,7 @@ function Home(){
       {/* <button><ArrowRightIcon/></button> */}
       </SimpleGrid>
       </div>
-    </div>
+    </Box>
 
     <Box paddingTop={10}>
     <Heading fontSize={'18px'} marginLeft={'225px'}  textAlign={'left'} >There's more 
