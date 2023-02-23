@@ -85,15 +85,14 @@ import { FaBold } from 'react-icons/fa';
         //     paddingRight='20px'>
         //   <Goto to='/admin' >Hello Admin</Goto>
         //     </Button> :
-            <Button
-            as={'a'}
-            fontSize={'sm'}
-            fontWeight={400}
-            bg={'blue.200'}
-            paddingLeft='20px'
-            paddingRight='20px'>
-          <Goto to='/login' >Sign In</Goto>
-          </Button>}
+        <Select width={'110px'} fontSize={'sm'}
+        textAlign='center'
+        fontWeight={400}
+        bg={'blue.200'} >
+          <option value="login">Login</option>
+          <option value="AsAdmin" Goto='/admin'> As Admin</option>
+          <option value="AsUser">As User</option>
+        </Select>}
           <Button
             // display={{ base: 'none', md: 'inline-flex' }}
             fontSize={'sm'}

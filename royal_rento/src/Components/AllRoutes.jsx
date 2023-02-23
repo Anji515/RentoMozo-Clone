@@ -1,5 +1,6 @@
 import React from 'react';
 import {Routes,Route} from 'react-router-dom';
+import AdminPage from '../AllPages/AdminPage/Admin';
 import Cart from '../AllPages/Cart/Cart';
 import WishList from '../AllPages/Cart/WishList';
 import Home from '../AllPages/HomePage/Home';
@@ -17,10 +18,8 @@ function AllRoutes(){
                         <Products/>
                     </PrivateRoute>
         }/> */}
-        <Route path='/admin' element={''
-                   // <PrivateRoute>
-                        // <AdminPage/>
-                   // </PrivateRoute>
+        <Route path='/admin' element={
+                        <AdminPage/>
         }/>
         <Route path='/signup' element={<SignUp/>}/> 
         <Route path='/cart' element={

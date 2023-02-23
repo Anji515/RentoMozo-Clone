@@ -1,0 +1,216 @@
+{
+  "mobiles": [
+    {
+      "brandName": "Apple iPhone XR 64GB (Black)",
+      "price": 1839,
+      "imageUrl": "https://p.rmjo.in/productSquare/vmbb6qhr-500x500.jpg",
+      "tenure": 6,
+      "id": 2
+    },
+    {
+      "brandName": "Apple iPhone 11 Pro (Midnight Green)",
+      "price": 3349,
+      "imageUrl": "https://p.rmjo.in/productSquare/byeagjss-500x500.jpg",
+      "tenure": 6,
+      "id": 3
+    },
+    {
+      "brandName": "OnePlus 7 (Mirror Gray)",
+      "price": 1109,
+      "imageUrl": "https://p.rmjo.in/productSquare/lbf7407m-500x500.jpg",
+      "tenure": 6,
+      "id": 4
+    },
+    {
+      "brandName": "Redmi K20 Pro (Carbon Black)",
+      "price": 929,
+      "imageUrl": "https://p.rmjo.in/productSquare/yhx594uv-500x500.jpg",
+      "tenure": 6,
+      "id": 5
+    },
+    {
+      "brandName": "Samsung Galaxy Note 10 (Aura Black)",
+      "price": 2229,
+      "imageUrl": "https://p.rmjo.in/productSquare/fhonufah-500x500.jpg",
+      "tenure": 6,
+      "id": 6
+    },
+    {
+      "brandName": "Apple iPhone XS Max (Silver)",
+      "price": 3729,
+      "imageUrl": "https://p.rmjo.in/productSquare/4kco0n7s-500x500.jpg",
+      "tenure": [
+        6,
+        12
+      ],
+      "id": 7
+    },
+    {
+      "brandName": "Apple iPhone X (Silver)",
+      "price": 3039,
+      "imageUrl": "https://p.rmjo.in/productSquare/glmhtqql-500x500.jpg",
+      "tenure": 6,
+      "id": 8
+    },
+    {
+      "brandName": "Apple iPhone 8 (Gold)",
+      "price": 2169,
+      "imageUrl": "https://p.rmjo.in/productSquare/vw8fgse9-500x500.jpg",
+      "tenure": 6,
+      "id": 9
+    },
+    {
+      "brandName": "OnePlus 6T (Mirror Black)",
+      "price": 1199,
+      "imageUrl": "https://p.rmjo.in/productSquare/6o3lg8ky-500x500.jpg",
+      "tenure": 6,
+      "id": 10
+    },
+    {
+      "brandName": "Oppo F11 Pro (Thunder Black)",
+      "price": 759,
+      "imageUrl": "https://p.rmjo.in/productSquare/ng1wgdjv-500x500.jpg",
+      "tenure": 6,
+      "id": 11
+    },
+    {
+      "brandName": "Samsung Galaxy S9 (Black)",
+      "price": 1589,
+      "imageUrl": "https://p.rmjo.in/productSquare/t0rotvxl-500x500.jpg",
+      "tenure": [
+        6,
+        12
+      ],
+      "id": 12
+    },
+    {
+      "brandName": "Apple iPhone 6S (Space Grey)",
+      "price": 799,
+      "imageUrl": "https://p.rmjo.in/productSquare/fgcl0o0i-500x500.jpg",
+      "tenure": 6,
+      "id": 13
+    },
+    {
+      "brandName": "OnePlus 7T ( Frosted Silver )",
+      "price": 1309,
+      "imageUrl": "https://p.rmjo.in/productSquare/d0ecgei2-500x500.jpg",
+      "tenure": 6,
+      "id": 14
+    },
+    {
+      "brandName": "Galaxy A50 (Blue)",
+      "price": 619,
+      "imageUrl": "https://p.rmjo.in/productSquare/bvpxqjj5-500x500.jpg",
+      "tenure": 6,
+      "id": 13
+    },
+    {
+      "brandName": "Galaxy A50s (Prism Crush White)",
+      "price": 779,
+      "imageUrl": "https://p.rmjo.in/productSquare/cji6uh7h-500x500.jpg",
+      "tenure": 6,
+      "id": 16
+    },
+    {
+      "tenure": "",
+      "brandName": "Oppo F11 (Fluorite Purple)",
+      "price": "586",
+      "imageUrl": "https://p.rmjo.in/moodShot/0wpfnh8n-1024x512.jpg",
+      "name": "6",
+      "id": 17
+    }
+  ],
+  "furnitures": [
+    {
+      "brandName": "Apple iPhone 11 Pro (Midnight Green)",
+      "price": 3349,
+      "imageUrl": "https://p.rmjo.in/productSquare/byeagjss-500x500.jpg",
+      "tenure": 6,
+      "id": 3
+    },
+    {
+      "brandName": "OnePlus 7 (Mirror Gray)",
+      "price": 1109,
+      "imageUrl": "https://p.rmjo.in/productSquare/lbf7407m-500x500.jpg",
+      "tenure": 6,
+      "id": 4
+    },
+    {
+      "brandName": "Redmi K20 Pro (Carbon Black)",
+      "price": 929,
+      "imageUrl": "https://p.rmjo.in/productSquare/yhx594uv-500x500.jpg",
+      "tenure": 6,
+      "id": 5
+    },
+    {
+      "brandName": "Samsung Galaxy Note 10 (Aura Black)",
+      "price": 2229,
+      "imageUrl": "https://p.rmjo.in/productSquare/fhonufah-500x500.jpg",
+      "tenure": 6,
+      "id": 6
+    },
+    {
+      "brandName": "Apple iPhone XS Max (Silver)",
+      "price": 3729,
+      "imageUrl": "https://p.rmjo.in/productSquare/4kco0n7s-500x500.jpg",
+      "tenure": 6,
+      "id": 7
+    },
+    {
+      "brandName": "Apple iPhone X (Silver)",
+      "price": 3039,
+      "imageUrl": "https://p.rmjo.in/productSquare/glmhtqql-500x500.jpg",
+      "tenure": 6,
+      "id": 8
+    },
+    {
+      "brandName": "Apple iPhone 8 (Gold)",
+      "price": 2169,
+      "imageUrl": "https://p.rmjo.in/productSquare/vw8fgse9-500x500.jpg",
+      "tenure": 6,
+      "id": 9
+    },
+    {
+      "brandName": "OnePlus 6T (Mirror Black)",
+      "price": 1199,
+      "imageUrl": "https://p.rmjo.in/productSquare/6o3lg8ky-500x500.jpg",
+      "tenure": 6,
+      "id": 10
+    },
+    {
+      "brandName": "Oppo F11 Pro (Thunder Black)",
+      "price": 759,
+      "imageUrl": "https://p.rmjo.in/productSquare/ng1wgdjv-500x500.jpg",
+      "tenure": 6,
+      "id": 11
+    },
+    {
+      "brandName": "Samsung Galaxy S9 (Black)",
+      "price": 1589,
+      "imageUrl": "https://p.rmjo.in/productSquare/t0rotvxl-500x500.jpg",
+      "tenure": 6,
+      "id": 12
+    },
+    {
+      "brandName": "Apple iPhone 6S (Space Grey)",
+      "price": 799,
+      "imageUrl": "https://p.rmjo.in/productSquare/fgcl0o0i-500x500.jpg",
+      "tenure": 6,
+      "id": 13
+    },
+    {
+      "brandName": "OnePlus 7T ( Frosted Silver )",
+      "price": 1309,
+      "imageUrl": "https://p.rmjo.in/productSquare/d0ecgei2-500x500.jpg",
+      "tenure": 6,
+      "id": 14
+    },
+    {
+      "brandName": "Galaxy A50 (Blue)",
+      "price": 619,
+      "imageUrl": "https://p.rmjo.in/productSquare/bvpxqjj5-500x500.jpg",
+      "tenure": 6,
+      "id": 13
+    }
+  ]
+}
