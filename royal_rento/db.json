@@ -118,6 +118,104 @@
       "imageUrl": "https://p.rmjo.in/moodShot/0wpfnh8n-1024x512.jpg",
       "name": "6",
       "id": 17
+    },
+    {
+      "tenure": "",
+      "brandName": "",
+      "price": "",
+      "imageUrl": "",
+      "id": 18
+    },
+    {
+      "tenure": "",
+      "brandName": "",
+      "price": "",
+      "imageUrl": "",
+      "id": 19
+    },
+    {
+      "tenure": "",
+      "brandName": "",
+      "price": "",
+      "imageUrl": "",
+      "id": 20
+    },
+    {
+      "tenure": "",
+      "brandName": "",
+      "price": "",
+      "imageUrl": "",
+      "id": 21
+    },
+    {
+      "tenure": "",
+      "brandName": "",
+      "price": "",
+      "imageUrl": "",
+      "id": 22
+    },
+    {
+      "tenure": "",
+      "brandName": "",
+      "price": "",
+      "imageUrl": "",
+      "id": 23
+    },
+    {
+      "tenure": "",
+      "brandName": "",
+      "price": "",
+      "imageUrl": "",
+      "id": 24
+    },
+    {
+      "tenure": "",
+      "brandName": "",
+      "price": "",
+      "imageUrl": "",
+      "id": 25
+    },
+    {
+      "tenure": "",
+      "brandName": "",
+      "price": "",
+      "imageUrl": "",
+      "id": 26
+    },
+    {
+      "tenure": "",
+      "brandName": "",
+      "price": "",
+      "imageUrl": "",
+      "id": 27
+    },
+    {
+      "tenure": "",
+      "brandName": "",
+      "price": "",
+      "imageUrl": "",
+      "id": 28
+    },
+    {
+      "tenure": "",
+      "brandName": "",
+      "price": "",
+      "imageUrl": "",
+      "id": 29
+    },
+    {
+      "tenure": "",
+      "brandName": "",
+      "price": "",
+      "imageUrl": "",
+      "id": 30
+    },
+    {
+      "tenure": "",
+      "brandName": "",
+      "price": "",
+      "imageUrl": "",
+      "id": 31
     }
   ],
   "furnitures": [
@@ -211,6 +309,36 @@
       "imageUrl": "https://p.rmjo.in/productSquare/bvpxqjj5-500x500.jpg",
       "tenure": 6,
       "id": 13
+    }
+  ],
+  "fitness": [
+    {
+      "brandName": "Apple iPhone 11 Pro (Midnight Green)",
+      "price": 3349,
+      "imageUrl": "https://p.rmjo.in/productSquare/byeagjss-500x500.jpg",
+      "tenure": 6,
+      "id": 3
+    },
+    {
+      "brandName": "OnePlus 7 (Mirror Gray)",
+      "price": 1109,
+      "imageUrl": "https://p.rmjo.in/productSquare/lbf7407m-500x500.jpg",
+      "tenure": 6,
+      "id": 4
+    },
+    {
+      "brandName": "Redmi K20 Pro (Carbon Black)",
+      "price": 929,
+      "imageUrl": "https://p.rmjo.in/productSquare/yhx594uv-500x500.jpg",
+      "tenure": 6,
+      "id": 5
+    },
+    {
+      "tenure": "6",
+      "brandName": "Foldable Treadmill TD-M4",
+      "price": "1459",
+      "imageUrl": "https://p.rmjo.in/moodShot/6m35agi4-1024x512.jpg",
+      "id": 6
     }
   ]
 }
