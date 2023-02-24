@@ -1,15 +1,9 @@
-import React, { useEffect } from 'react'
-import { Grid, GridItem, Input, FormLabel, Button, Heading, SimpleGrid } from '@chakra-ui/react';
-import { useState, useContext } from 'react';
-import axios from 'axios'
-import { Navigate } from 'react-router-dom';
+import React from 'react'
+import { GridItem, Button, Heading, SimpleGrid } from '@chakra-ui/react';
+// import { useState, useContext } from 'react';
+// import { Navigate } from 'react-router-dom';
 // import { authState } from '../Contexts/AuthContext';
 import {Link as Goto} from 'react-router-dom'
-import Mobiles from './Mobiles';
-import Furniture from './Furniture';
-import FitnessEquip from './Fitness';
-// import CompExample from './Alert';
-
 
 function AdminPage() {
 
@@ -23,65 +17,36 @@ function AdminPage() {
           <br />
           <hr />
           <br />
-          <SimpleGrid columns={3} width='75%' borderRadius={18} margin={'auto'} boxShadow = 'rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset' padding={65}>
-            <GridItem>
-              <Heading color='grey' fontSize={18}>Manage Mobile Products Here</Heading>
-              <br />
-              <Button bg={'white'} border='1px solid red'>Go to Mobiles</Button>
-            </GridItem>
+          <SimpleGrid columns={[1,2,3]} width='75%' gap={'10px'} bg={'blue.200'} height={'450px'} alignItems='center' borderRadius={18} margin={'auto'} boxShadow='rgba(0, 0, 0, 0.35) 0px 5px 15px' padding={65}>
+          {/* Mobiles Components */}
+          {/* <Mobiles /> */}
 
-            <GridItem>
-              <Heading color='grey' fontSize={18} >Manage Furniture Products Here</Heading>
+            <GridItem bg={'blue.100'} boxShadow = 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px' paddingTop={105} paddingBottom={105} borderRadius={18}>
+              <Heading border={'1px solid grey'} width='95%' padding={'5px'} borderRadius='16px' margin={'auto'} color='black' fontSize={18}>Manage Mobile Products Here</Heading>
+              <br />
+              <Button bg={'pink.100'}  border='1px solid red'><Goto to='/mobiles'>Go to Mobiles</Goto></Button>
+            </GridItem>
+          {/* Furnitures Form */}
+          {/* <Furniture/> */}
+
+            <GridItem bg={'blue.100'} boxShadow = 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px' paddingTop={105} paddingBottom={105} borderRadius={18}>
+              <Heading border={'1px solid grey'} width='95%' padding={'5px'} borderRadius='16px' margin={'auto'} color='black' fontSize={18} >Manage Furniture Products Here</Heading>
            <br />
-              <Button border='1px solid red' bg={'white'}>Go to Furniture</Button>
+              <Button bg={'pink.100'} border='1px solid red' ><Goto to='/furnitures'>Go to Furniture</Goto></Button>
             </GridItem>
-
-            <GridItem>
-              <Heading color='grey' fontSize={18}>Manage Fitness Equipements Here</Heading>
+          {/* Fitness Equipements */}
+          {/* <FitnessEquip/>    */}
+    
+            <GridItem bg={'blue.100'} boxShadow = 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px' paddingTop={105} paddingBottom={105} borderRadius={18}>
+              <Heading border={'1px solid grey'} width='95%' padding={'5px'} borderRadius='16px' margin={'auto'} color='black' fontSize={18}>Manage Fitness Equipements Here</Heading>
               <br />
-              <Button border='1px solid red' bg={'white'}>Go to Equipements</Button>
+              <Button bg={'pink.100'} border='1px solid red' ><Goto to='/fitness'>Go to Fitness</Goto></Button>
             </GridItem>
 
           </SimpleGrid>
           <br />
-          {/* Mobiles Components */}
-          <Mobiles />
-
-          {/* Furnitures Form */}
-          <Furniture/>
-
-          {/* Fitness Equipements */}
-          <FitnessEquip/>   
     </div>
     )
   }
   
 export default AdminPage
-
-
-
-
-
-
-
-
-// async function postProducts(obj){
-//   try {
-//    let res = await fetch('https://63984905fe03352a94cb30eb.mockapi.io/adpro',{
-//        method:'POST',
-//        headers:{
-//            'Content-Type':'application/json'
-//        },
-//        body:JSON.stringify(obj)
-//       })
-//       if(res.ok){
-//        showmessage("Product Added Sucessfully","green","fa-check")
-//       }else{
-       
-//        showmessage("Unable to add Product","red","fa-xmark")
-//       }
-//   } catch (error) {
-//    showmessage("Unable to add Product","red","fa-xmark")
-//   } 
-  
-// }

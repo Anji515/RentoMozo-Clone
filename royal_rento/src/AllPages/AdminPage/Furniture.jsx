@@ -71,8 +71,6 @@ function Furniture(){
          <form onSubmit={handleFurnDelete} > 
          <FormLabel>Product ID </FormLabel>
           <Input type='number' placeholder='Enter The Product ID' value={deleteFurnId} onChange={(e)=>setFurnId(e.target.value)} />
-          {/* <FormLabel>Product Name</FormLabel>
-          <Input type='text' placeholder='Enter The Product Name' onChange={(e)=> e.target.value} /> */}
           <br />
           <br />
          <Button type='submit' >Delete Furniture</Button>
@@ -98,41 +96,14 @@ function Furniture(){
         </form>
         </GridItem> */}
 
-
         <GridItem >
+        <Button><Goto to='/admin'>Go To Dashboard</Goto></Button>
+           <br />
+           <br />
+           <hr />
+           <br />
            <FormLabel>Total No. of Products : <Button>{furnFinal.length}</Button></FormLabel>
         </GridItem>
-        {/* {final?.map((el)=>(
-          
-          <Center py={6}>
-         <Box width={'30%'}
-           maxW={'300px'}
-           w={'full'}
-           boxShadow={'2xl'}
-           rounded={'md'}
-           p={6}
-           overflow={'hidden'}>
-           <Box
-             h={'300px'}
-             bg={'gray.100'}
-             mt={-6}
-             mx={-6}
-             mb={6}
-             pos={'relative'}>
-             <Image height='300px' width='100%'
-             src={el.imageUrl}
-             />
-           </Box>
-           <Stack>
-           <Text color='gray.700'
-               fontSize={'2xl'}
-               fontFamily={'body'}>{el.brandName}</Text>
-               <Text color={'gray.500'}>{el.name}</Text>
-               <Text color={'gray.500'}>₹ {el.price}</Text>
-               </Stack>
-               </Box>
-               </Center>
- ))} */}
 
     </Grid>
 
