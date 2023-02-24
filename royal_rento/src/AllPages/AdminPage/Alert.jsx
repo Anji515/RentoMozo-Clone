@@ -1,16 +1,17 @@
+import {Link as Goto} from 'react-router-dom'
 import {
     Alert,
     AlertIcon,
     AlertTitle,
-    AlertDescription,
     useDisclosure,
     Box,
     CloseButton,
     Button,
+    AlertDescription,
   } from '@chakra-ui/react'
 
 
-function CompExample({setVisble,visible}) {
+function CompExample({visible}) {
     const {
       isOpen: isVisible,
       onClose,
@@ -22,25 +23,25 @@ function CompExample({setVisble,visible}) {
         <AlertIcon />
         <Box>
           <AlertTitle>Success Deleted!</AlertTitle>
-          {/* <AlertDescription>
-            Your application has been received. We will review your application
-            and respond within the next 48 hours.
-          </AlertDescription> */}
+          <AlertDescription _hover={{
+            textDecoration:'underline'
+          }}>
+            <Goto to='/admin'>Go to Admin Dashboard</Goto></AlertDescription>
         </Box>
-        <CloseButton
+        {/* <CloseButton
           alignSelf='flex-start'
           position='relative'
           right={-1}
           top={-1}
           onClick={onClose}
-        />
+        /> */}
       </Alert>
     ) : (
       <Button bg={'white'} isDisabled={visible} onClick={onOpen}></Button>
     )
   }
 
-  function AddingStatus({visibleAdd,setVisbleAdd}) {
+  function AddingStatus({visibleAdd}) {
     const {
       isOpen: isVisible,
       onClose,
@@ -57,16 +58,16 @@ function CompExample({setVisble,visible}) {
             and respond within the next 48 hours.
           </AlertDescription> */}
         </Box>
-        <CloseButton
+        {/* <CloseButton
           alignSelf='flex-start'
           position='relative'
           right={-1}
           top={-1}
           onClick={onClose}
-        />
+        /> */}
       </Alert>
     ) : (
-      <Button bg={'white'} isDisabled={visibleAdd} onClick={onOpen}></Button>
+      <Button bg={'white'} isDisabled={visibleAdd} onClick={onOpen} />
     )
   }
 

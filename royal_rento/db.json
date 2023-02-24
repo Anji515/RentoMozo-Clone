@@ -11,7 +11,7 @@
       "brandName": "Apple iPhone 11 Pro (Midnight Green)",
       "price": 3349,
       "imageUrl": "https://p.rmjo.in/productSquare/byeagjss-500x500.jpg",
-      "tenure": 6,
+      "tenure": 12,
       "id": 3
     },
     {
@@ -36,16 +36,6 @@
       "id": 6
     },
     {
-      "brandName": "Apple iPhone XS Max (Silver)",
-      "price": 3729,
-      "imageUrl": "https://p.rmjo.in/productSquare/4kco0n7s-500x500.jpg",
-      "tenure": [
-        6,
-        12
-      ],
-      "id": 7
-    },
-    {
       "brandName": "Apple iPhone X (Silver)",
       "price": 3039,
       "imageUrl": "https://p.rmjo.in/productSquare/glmhtqql-500x500.jpg",
@@ -56,7 +46,7 @@
       "brandName": "Apple iPhone 8 (Gold)",
       "price": 2169,
       "imageUrl": "https://p.rmjo.in/productSquare/vw8fgse9-500x500.jpg",
-      "tenure": 6,
+      "tenure": 0,
       "id": 9
     },
     {
@@ -72,16 +62,6 @@
       "imageUrl": "https://p.rmjo.in/productSquare/ng1wgdjv-500x500.jpg",
       "tenure": 6,
       "id": 11
-    },
-    {
-      "brandName": "Samsung Galaxy S9 (Black)",
-      "price": 1589,
-      "imageUrl": "https://p.rmjo.in/productSquare/t0rotvxl-500x500.jpg",
-      "tenure": [
-        6,
-        12
-      ],
-      "id": 12
     },
     {
       "brandName": "Apple iPhone 6S (Space Grey)",
@@ -110,112 +90,6 @@
       "imageUrl": "https://p.rmjo.in/productSquare/cji6uh7h-500x500.jpg",
       "tenure": 6,
       "id": 16
-    },
-    {
-      "tenure": "",
-      "brandName": "Oppo F11 (Fluorite Purple)",
-      "price": "586",
-      "imageUrl": "https://p.rmjo.in/moodShot/0wpfnh8n-1024x512.jpg",
-      "name": "6",
-      "id": 17
-    },
-    {
-      "tenure": "",
-      "brandName": "",
-      "price": "",
-      "imageUrl": "",
-      "id": 18
-    },
-    {
-      "tenure": "",
-      "brandName": "",
-      "price": "",
-      "imageUrl": "",
-      "id": 19
-    },
-    {
-      "tenure": "",
-      "brandName": "",
-      "price": "",
-      "imageUrl": "",
-      "id": 20
-    },
-    {
-      "tenure": "",
-      "brandName": "",
-      "price": "",
-      "imageUrl": "",
-      "id": 21
-    },
-    {
-      "tenure": "",
-      "brandName": "",
-      "price": "",
-      "imageUrl": "",
-      "id": 22
-    },
-    {
-      "tenure": "",
-      "brandName": "",
-      "price": "",
-      "imageUrl": "",
-      "id": 23
-    },
-    {
-      "tenure": "",
-      "brandName": "",
-      "price": "",
-      "imageUrl": "",
-      "id": 24
-    },
-    {
-      "tenure": "",
-      "brandName": "",
-      "price": "",
-      "imageUrl": "",
-      "id": 25
-    },
-    {
-      "tenure": "",
-      "brandName": "",
-      "price": "",
-      "imageUrl": "",
-      "id": 26
-    },
-    {
-      "tenure": "",
-      "brandName": "",
-      "price": "",
-      "imageUrl": "",
-      "id": 27
-    },
-    {
-      "tenure": "",
-      "brandName": "",
-      "price": "",
-      "imageUrl": "",
-      "id": 28
-    },
-    {
-      "tenure": "",
-      "brandName": "",
-      "price": "",
-      "imageUrl": "",
-      "id": 29
-    },
-    {
-      "tenure": "",
-      "brandName": "",
-      "price": "",
-      "imageUrl": "",
-      "id": 30
-    },
-    {
-      "tenure": "",
-      "brandName": "",
-      "price": "",
-      "imageUrl": "",
-      "id": 31
     }
   ],
   "furnitures": [

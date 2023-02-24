@@ -29,6 +29,7 @@ function Mobiles(){
         fetchMobData()
         setData({'tenure':'','brandName':'', 'price':'', 'imageUrl':''})
         setVisbleAdd(!visibleAdd);
+        // alert('Item Added Sucessfully !')
       })
     }
 
@@ -48,6 +49,7 @@ function Mobiles(){
         fetchMobData() 
         if(res.status == 200){
         setVisble(!visible);
+        // alert('Item Added Sucessfully !')
         setId('')
         }
     });
@@ -93,7 +95,7 @@ function Mobiles(){
           <br />
           <br />
             {/* <CompExample/> */}
-           <Button type='submit'>Delete Mobiles</Button>
+           <Button type='submit' isDisabled={!deleteId}>Delete Mobiles</Button>
            <br />
            {visible?<CompExample setVisble={setVisble} visible={visible}/>:''}
         </form>
@@ -120,39 +122,13 @@ function Mobiles(){
 
 
         <GridItem >
-           <FormLabel>Total No. of Products : <Button>{final.length}</Button></FormLabel>
+           <Button><Goto to='/admin'>Go To Dashboard</Goto></Button>
+           <br />
+           <br />
+           <hr />
+           <br />
+           <FormLabel textAlign={'center'}>Total No. of Products : <Button>{final.length}</Button></FormLabel>
         </GridItem>
-        {/* {final?.map((el)=>(
-          
-          <Center py={6}>
-         <Box width={'30%'}
-           maxW={'300px'}
-           w={'full'}
-           boxShadow={'2xl'}
-           rounded={'md'}
-           p={6}
-           overflow={'hidden'}>
-           <Box
-             h={'300px'}
-             bg={'gray.100'}
-             mt={-6}
-             mx={-6}
-             mb={6}
-             pos={'relative'}>
-             <Image height='300px' width='100%'
-             src={el.imageUrl}
-             />
-           </Box>
-           <Stack>
-           <Text color='gray.700'
-               fontSize={'2xl'}
-               fontFamily={'body'}>{el.brandName}</Text>
-               <Text color={'gray.500'}>{el.name}</Text>
-               <Text color={'gray.500'}>₹ {el.price}</Text>
-               </Stack>
-               </Box>
-               </Center>
- ))} */}
 
          </Grid>
          </div>
