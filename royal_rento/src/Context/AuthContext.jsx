@@ -3,13 +3,14 @@ export const authState = createContext()
 
 function AuthContextProvider({children}) {
     const [loading,setLoading] = useState(false)
-    const [isAuth,setAuth] = useState(false);
-    console.log('isAuth:', isAuth)
+    const [isAuth,setAuth] = useState(true);
+    // console.log('isAuth:', isAuth)
     const [token,setToken] = useState(null);
 
     // Mobile Cart and WhishList
     const [wishData,setWishData] = useState([]);
     const [cartData,setCartItemCont] = useState([]);
+    // console.log('cartData:', cartData)
 
 
     // Furnitures Cart and WhishList
@@ -19,7 +20,7 @@ function AuthContextProvider({children}) {
     // Furnitures Cart and WhishList
     const [wishDataFit,setWishDataFit] = useState([]);
     const [cartDataFit,setCartItemContFit] = useState([]);
-    console.log('cartDataFit:', cartDataFit)
+    // console.log('cartDataFit:', cartDataFit)
 
 
     // console.log('data:', data)

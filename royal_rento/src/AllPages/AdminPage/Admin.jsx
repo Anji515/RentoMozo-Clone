@@ -1,18 +1,17 @@
 import React from 'react'
 import { GridItem, Button, Heading, SimpleGrid } from '@chakra-ui/react';
-// import { useState, useContext } from 'react';
-// import { Navigate } from 'react-router-dom';
-// import { authState } from '../Contexts/AuthContext';
+import { useState, useContext } from 'react';
 import {Link as Goto} from 'react-router-dom'
+import { authState } from '../../Context/AuthContext';
 
 function AdminPage() {
+ 
+   const {logoutUser} =useContext(authState)
 
     return (
       <div>
           <Heading color='grey' >Welcome to Admin Page</Heading>
-          <Button 
-        //   onClick={handleLogout}
-          ><Goto to='/login'>Sign Out</Goto></Button>
+          <Button onClick={()=>logoutUser(false)} >Logout</Button>
           <br />
           <br />
           <hr />

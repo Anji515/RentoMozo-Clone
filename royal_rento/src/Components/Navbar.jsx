@@ -1,14 +1,25 @@
-import {Box,Flex,Text,Button,Stack,Image,Input,Link,useColorModeValue,useBreakpointValue, FormControl, FormLabel, Select} from '@chakra-ui/react';
+import {Box,Flex,Text,Button,Stack,Image,Input,useColorModeValue,useBreakpointValue, FormControl, Select} from '@chakra-ui/react';
+import { SearchIcon} from '@chakra-ui/icons';
+import {Link as Goto, useNavigate} from 'react-router-dom'
+import { useContext, useState } from 'react';
+import { authState } from '../Context/AuthContext';
 
-import { SearchIcon,CalendarIcon} from '@chakra-ui/icons';
-import {Link as Goto} from 'react-router-dom'
-// import { authState } from '../Contexts/AuthContext';
-// import { useContext } from 'react';
-import { FaBold } from 'react-icons/fa';
+export default function Navbar() {
+    
+    const {isAuth} = useContext(authState)
 
-  export default function Navbar() {
-
-    // const {isAuth} = useContext(authState);
+    const navigate = useNavigate();
+       const [admin,setAdmin] = useState('login')
+    const handleChange=(e)=>{
+       if(e.target.value==='AsAdmin'){
+        // console.log(e.target.value)
+            setAdmin('As Admin');
+            navigate('/loginadmin')
+         } else if(e.target.value==='AsUser'){
+            setAdmin('As User');
+            navigate('/loginuser')
+         }
+    }
 
     const Cities = ['Banglore','Hyderabad','Delhi','Mumbai','Pune','Noida','Gurgaon','Chennai','Ahmedabada','Jaipur','GhandiNagar','Kolkata','Mysore','Faridabad','Gaziabad']
   
@@ -46,7 +57,6 @@ import { FaBold } from 'react-icons/fa';
         </Flex>
       </FormControl>
       </Box>
-      {/* border={'1px solid red'} */}
       <Stack  marginTop={'25px'} fontSize='19px' fontWeight='490' marginLeft={'20px'}
           direction={'row'}
           spacing={6} >
@@ -75,24 +85,15 @@ import { FaBold } from 'react-icons/fa';
           justify={'flex-end'}
           direction={'row'}
           spacing={6}>
-          {
-        //     <Button
-        //     as={'a'}
-        //     fontSize={'sm'}
-        //     fontWeight={400}
-        //     bg={'blue.200'}
-        //     paddingLeft='20px'
-        //     paddingRight='20px'>
-        //   <Goto to='/admin' >Hello Admin</Goto>
-        //     </Button> :
-        <Select width={'110px'} fontSize={'sm'}
+        {isAuth ? <Button><Goto to='/admin'>Hello Admin</Goto></Button>:<Select width={'110px'} fontSize={'sm'}
         textAlign='center'
+        value={admin}
         fontWeight={400}
-        bg={'blue.200'} >
+        bg={'blue.200'} onChange={handleChange} >
           <option value="login">Login</option>
-          <option value="AsAdmin" Goto='/admin'> As Admin</option>
+          <option value="AsAdmin" > As Admin</option>
           <option value="AsUser">As User</option>
-        </Select>}
+          </Select>}
           <Button
             // display={{ base: 'none', md: 'inline-flex' }}
             fontSize={'sm'}
