@@ -54,9 +54,10 @@ function ProductMob(){
         try {
             setLoading(true);
             const final = await fetch(url)
+            // console.log('final:', final)
             let res = await final.json();
             setData(res);
-            console.log('res.data:', res)
+            // console.log('res.data:', res)
             setLoading(false)            
            } catch (error) {
             console.log('error:', error)
@@ -78,6 +79,7 @@ function ProductMob(){
         } else {
         setCartItem(updatedCart)
         }
+        alert('Item Added to Cart , Go to Cart')
     }
 
 const handleWish=(item)=>{
@@ -107,7 +109,6 @@ const handleWish=(item)=>{
     },[page,orderBy,searchQuery])
 
     const handelTenure=(num,id)=>{
-
         let exist=false
         const updatedTenure = data.map((ten)=>{
         if(ten.id === id){
@@ -176,7 +177,7 @@ const handleWish=(item)=>{
         </Grid >
         <Button isDisabled={page===1} onClick={()=>handlePageChange(-1)}>Prev</Button>
         <Button isDisabled={true} border='2px' borderColor='green.500'>{page}</Button>
-        <Button onClick={()=>handlePageChange(1)}>Next</Button>
+        <Button isDisabled={page==2} onClick={()=>handlePageChange(1)}>Next</Button>
         </div>)
 }
 

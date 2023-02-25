@@ -29,7 +29,7 @@ const getUrl=(url,sort,orderBy,search)=>{
 }
 
 function ProductFurn(){
-    const {setCartItemContFurn,setWishDataFurn} = useContext(authState);
+    const {setCartItemCont,setWishData} = useContext(authState);
     const [data,setData] = useState([]) ;
     // console.log('dataAfter:', data)
     const [loading,setLoading]=useState(false) ;
@@ -42,10 +42,10 @@ function ProductFurn(){
     const [cartItem,setCartItem] = useState([]) ;
 
     // For Wish List
-    setWishDataFurn(cart)
+    setWishData(cart)
 
     // For Cart
-    setCartItemContFurn(cartItem);
+    setCartItemCont(cartItem);
 
     const [searchQuery,setSearchQuery] =useState('')
 

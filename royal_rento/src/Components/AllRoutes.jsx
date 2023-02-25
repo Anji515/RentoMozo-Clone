@@ -4,47 +4,101 @@ import AdminPage from '../AllPages/AdminPage/Admin';
 import FitnessEquip from '../AllPages/AdminPage/Fitness';
 import Furniture from '../AllPages/AdminPage/Furniture';
 import Mobiles from '../AllPages/AdminPage/Mobiles';
-import Cart from '../AllPages/Cart/Cart';
 import WishList from '../AllPages/Cart/WishList';
 import Home from '../AllPages/HomePage/Home';
-import Login from '../AllPages/Login';
+import LoginAdmin from '../AllPages/Login';
+import LoginUser from '../AllPages/LoginUser';
 import ProductFitness from '../AllPages/Products/ProductsFitness';
 import ProductFurn from '../AllPages/Products/ProductsFurn';
 import ProductMob from '../AllPages/Products/ProductsMob';
 import Signup from '../AllPages/SignUp';
+import PrivateRoute from './PrivateRoute';
+import ProductEss from './../AllPages/Products/ProductEss';
+import ProductBikes from './../AllPages/Products/ProductBike';
+import ProductApp from './../AllPages/Products/ProductApp';
+import Cart from './../AllPages/Cart/Cart';
+import Checkout from './../AllPages/CheckOut/Checkout';
 
 function AllRoutes(){
     return(
         
     <Routes>
         <Route path='/' element={<Home/>}/>
-        <Route path='/login' element={<Login/>}/> 
+        <Route path='/loginadmin' element={<LoginAdmin/>} />
+        <Route path='/loginuser' element={<LoginUser/>} /> 
         <Route path='/productMob' element={
-                    // <PrivateRoute>
+                    <PrivateRoute>
                         <ProductMob/>
-                    // </PrivateRoute>
+                    </PrivateRoute>
         }/>
         <Route path='/productFurn' element={
-                    // <PrivateRoute>
+                    <PrivateRoute>
                         <ProductFurn/>
-                    // </PrivateRoute>
+                    </PrivateRoute>
         }/>
         <Route path='/productFitness' element={
-                    // <PrivateRoute>
+                    <PrivateRoute>
                         <ProductFitness/>
-                    // </PrivateRoute>
+                    </PrivateRoute>
+        }/>
+        <Route path='/productEss' element={
+                    <PrivateRoute>
+                        <ProductEss/>
+                    </PrivateRoute>
+        }/>
+        <Route path='/productBike' element={
+                    <PrivateRoute>
+                        <ProductBikes/>
+                    </PrivateRoute>
+        }/>
+        <Route path='/productApp' element={
+                    <PrivateRoute>
+                        <ProductApp/>
+                    </PrivateRoute>
         }/>
         <Route path='/admin' element={
-                        <AdminPage/>
+                   <PrivateRoute>
+                            <AdminPage/>
+                    </PrivateRoute>
         }/>
         <Route path='/signup' element={<Signup/>}/> 
-        <Route path='/mobiles' element={<Mobiles/>}/> 
-        <Route path='/furnitures' element={<Furniture/>}/> 
-        <Route path='/fitness' element={<FitnessEquip/>}/> 
+        <Route path='/mobiles' element={
+        <PrivateRoute>
+            <Mobiles/>
+        </PrivateRoute>
+        }/> 
+        <Route path='/furnitures' element={
+                <PrivateRoute>
+                    <Furniture/>
+                </PrivateRoute>
+        }/> 
+        <Route path='/fitness' element={
+                <PrivateRoute>
+                    <FitnessEquip/>
+                </PrivateRoute>
+        }/> 
+        <Route path='/checkout' element={
+                <PrivateRoute>
+                    <Checkout/>
+                </PrivateRoute>
+        }/> 
+        {/* <Route path='/fitness' element={
+                <PrivateRoute>
+                    <FitnessEquip/>
+                </PrivateRoute>
+        }/> <Route path='/fitness' element={
+            <PrivateRoute>
+                <FitnessEquip/>
+            </PrivateRoute>
+        }/> <Route path='/fitness' element={
+            <PrivateRoute>
+            <FitnessEquip/>
+           </PrivateRoute>
+         }/>  */}
         <Route path='/cart' element={
-        // <PrivateRoute>
+        <PrivateRoute>
             <Cart/>
-        // </PrivateRoute> 
+        </PrivateRoute> 
     }/>
         <Route path='/wishlist' element={
                 //    <PrivateRoute>

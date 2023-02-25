@@ -53,10 +53,6 @@ function CompExample({visible}) {
         <AlertIcon />
         <Box>
           <AlertTitle>Succesfully Added..</AlertTitle>
-          {/* <AlertDescription>
-            Your application has been received. We will review your application
-            and respond within the next 48 hours.
-          </AlertDescription> */}
         </Box>
         {/* <CloseButton
           alignSelf='flex-start'

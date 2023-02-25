@@ -1,46 +1,45 @@
-import { Link } from "react-router-dom";
+import {Flex,FormControl,FormLabel,Input,Checkbox,Stack,Link,Button,Heading,Image} from '@chakra-ui/react';
 import { useContext } from 'react';
-// import { authState } from "../Contexts/AuthContext.jsx";
 import { useRef } from 'react';
 import { Navigate } from "react-router-dom";
-import {Button,Checkbox,Flex,FormControl,FormLabel,Heading,Input,Stack,Image,
-} from '@chakra-ui/react';
+import { authState } from '../Context/AuthContext';
 
-function Login() {
 
-//   const {isAuth,handleToken,loginUser}=useContext(authState);
+export default function LoginAdmin() {
+  const {isAuth,handleToken,loginUser}=useContext(authState);
   const refVal = useRef({'email':'','password':''})
 
   const hanldeChange=(e)=>{
-    refVal.current[e.target.type] = e.target.value;
+  refVal.current[e.target.type] = e.target.value;
+}
+
+const handleSubmit=(e)=>{
+   e.preventDefault();
+   fetchUser(refVal.current);
+}
+
+  const fetchUser= async(obj)=>{
+      try {
+        let res = await fetch(`https://reqres.in/api/login`,{
+          method:'POST',
+          body:JSON.stringify(obj),
+          headers:{
+            'Content-Type' : 'application/json'
+          }
+        });
+        let data = await res.json();
+          loginUser(true);
+          handleToken('Admin');
+      } catch (error) {
+        console.log('error:', error)
+      }
   }
- 
-  const handleSubmit=(e)=>{
-     e.preventDefault();
-     fetchUser(refVal.current);
+
+  if(isAuth){
+    return <Navigate to='/'/>
   }
- 
-    const fetchUser= async(obj)=>{
-        try {
-          let res = await fetch(`https://reqres.in/api/login`,{
-            method:'POST',
-            body:JSON.stringify(obj),
-            headers:{
-              'Content-Type' : 'application/json'
-            }
-          });
-          let data = await res.json();
-        //   loginUser(true);
-        //   handleToken(data.token)
-          console.log(data.token);
-        } catch (error) {
-          console.log('error:', error)
-        }
-    }
-  
-    // if(isAuth){
-    //   return <Navigate to='/'/>
-    // }
+
+
 
   return (
     <div className="login-page">
@@ -82,10 +81,6 @@ function Login() {
         />
       </Flex>
     </Stack>
-     <br />
-     <hr />
-     
     </div>
   );
 }
-export default Login;
