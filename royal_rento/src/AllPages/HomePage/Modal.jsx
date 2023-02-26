@@ -19,6 +19,7 @@ import {
     PopoverBody,
   } from '@chakra-ui/react'
 import { useState } from 'react'
+import { FaHotTub, FaThumbsUp } from 'react-icons/fa'
 
   function ModalComp() {
      const [text,setText] = useState('')
@@ -48,10 +49,10 @@ import { useState } from 'react'
                <Button onClick={()=>setText('')} isDisabled={!text}>Submit</Button>
               </PopoverTrigger>
                <PopoverContent>
-              <PopoverHeader fontWeight='semibold'>Responce Submitted</PopoverHeader>
+              <PopoverHeader fontWeight='semibold' color={'green'}><FaThumbsUp/> Responce Submitted</PopoverHeader>
                 <PopoverArrow />
                   <PopoverCloseButton />
-                     <PopoverBody>Please wait our techy will connect with you soon</PopoverBody>
+                     <PopoverBody color={'blue.300'}>Please wait our techy will connect with you soon</PopoverBody>
                 </PopoverContent>
           </Popover>
             </ModalFooter>

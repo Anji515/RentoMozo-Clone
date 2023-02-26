@@ -5,12 +5,15 @@ import axios from 'axios'
 import { Navigate } from 'react-router-dom';
 // import { authState } from '../Contexts/AuthContext';
 import {Link as Goto} from 'react-router-dom'
+import { AddingStatus, CompExample } from './Alert';
 
 function Furniture(){
 
     const [furnData,setFurnData] = useState({'tenure':'','brandName':'', 'price':'', 'imageUrl':''});
     const [furnFinal,setFurnFinal] = useState([]);
     const [deleteFurnId,setFurnId] = useState('');
+    const [visibleAdd,setVisbleAdd] = useState(false);
+    const [visible,setVisble] = useState(false);
 
     const hanldeFrunSubmit=(e)=>{
       e.preventDefault();
@@ -19,6 +22,7 @@ function Furniture(){
       }).then((res)=>{
         fetchFurnData()
         setFurnData({'tenure':'','brandName':'', 'price':'', 'imageUrl':''})
+        setVisbleAdd(!visibleAdd);
       })
     }
 
@@ -35,8 +39,12 @@ function Furniture(){
       axios.delete(`https://royalrento.onrender.com/furnitures/${deleteFurnId}`)
       .then((res)=>{
         fetchFurnData()
-        // setFurnId('') 
-      });
+         if(res.status == 200){
+        setVisble(!visible);
+        setFurnId('')
+        // alert('Item Added Sucessfully !')
+        }
+      }).catch((err)=>alert('Id Not Found , Please check and try Again'));
       }
 
       console.log('deleteId:', deleteFurnId)
@@ -60,6 +68,9 @@ function Furniture(){
         <br />
         <br />
         <Button type='submit'>Add Mobiles</Button>
+        <br />
+        <br />
+        {visibleAdd?<AddingStatus visibleAdd={visibleAdd} setVisbleAdd={setVisbleAdd}/>:''}
         </form>
         </GridItem>
 
@@ -73,7 +84,9 @@ function Furniture(){
           <Input type='number' placeholder='Enter The Product ID' value={deleteFurnId} onChange={(e)=>setFurnId(e.target.value)} />
           <br />
           <br />
-         <Button type='submit' >Delete Furniture</Button>
+         <Button type='submit' isDisabled={!deleteFurnId} >Delete Furniture</Button>
+         <br />
+         {visible?<CompExample setVisble={setVisble} visible={visible}/>:''}
         </form>
         </GridItem>
 

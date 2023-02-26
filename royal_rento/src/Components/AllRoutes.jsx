@@ -18,6 +18,8 @@ import ProductBikes from './../AllPages/Products/ProductBike';
 import ProductApp from './../AllPages/Products/ProductApp';
 import Cart from './../AllPages/Cart/Cart';
 import Checkout from './../AllPages/CheckOut/Checkout';
+import SingleUserPage from '../AllPages/Products/SingleProductPage';
+import SingleProductFurn from '../AllPages/Products/SingleProductFurn';
 
 function AllRoutes(){
     return(
@@ -82,11 +84,23 @@ function AllRoutes(){
                     <Checkout/>
                 </PrivateRoute>
         }/> 
-        {/* <Route path='/fitness' element={
+        {/* Single Pages */}
+        <Route path='/productMob/:id' element={
                 <PrivateRoute>
-                    <FitnessEquip/>
+                    <SingleUserPage/>
                 </PrivateRoute>
-        }/> <Route path='/fitness' element={
+        }/> 
+        <Route path='/productFurn/:id' element={
+                <PrivateRoute>
+                    <SingleProductFurn/>
+                </PrivateRoute>
+        }/> 
+        <Route path='/productFitness/:id' element={
+                <PrivateRoute>
+                    <SingleProductFurn/>
+                </PrivateRoute>
+        }/> 
+        {/* <Route path='/fitness' element={
             <PrivateRoute>
                 <FitnessEquip/>
             </PrivateRoute>
