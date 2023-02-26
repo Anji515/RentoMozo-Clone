@@ -1,8 +1,9 @@
 import { React, useEffect, useState, useContext } from 'react';
-import { Grid, GridItem, Text, Image, Heading, Button, Input, Spinner, Select, Box, Flex } from '@chakra-ui/react';
+import { Grid, GridItem, Text, Image, Heading, Button, Input, Spinner, Select, Box, Flex, HStack, Center, SimpleGrid, Stack } from '@chakra-ui/react';
 import { useSearchParams } from 'react-router-dom';
 import { authState } from './../../Context/AuthContext';
 import {  FaCartPlus,FaHeart} from 'react-icons/fa';
+import {Link as Goto} from 'react-router-dom'
 
 function getVal(val){
     let pages=+val
@@ -17,12 +18,12 @@ function getVal(val){
 }
 
 const getUrl=(url,sort,orderBy,search)=>{
-      
+    
     if(sort && orderBy){
         return (url=`${url}&_sort=${sort}&_order=${orderBy}`)
     }
     if(search){
-        return (url=`${url}&_q=${search}`)
+        return (url=`${url}&q=${search}`)
     }
     return url;
 }
@@ -30,7 +31,6 @@ const getUrl=(url,sort,orderBy,search)=>{
 function ProductMob(){
     const {setWishData,setCartItemCont} = useContext(authState);
     const [data,setData] = useState([]) ;
-    // console.log('dataAfter:', data)
     const [loading,setLoading]=useState(false) ;
     let [searchParam,setSearchParam] = useSearchParams()
     const pageNum=getVal(searchParam.get('page')) ;
@@ -41,22 +41,20 @@ function ProductMob(){
     const [cartItem,setCartItem] = useState([]) ;
 
     // For Wish List
-    setWishData(cart)
-
+    setWishData(cart);
     // For Cart
     setCartItemCont(cartItem);
 
     const [searchQuery,setSearchQuery] =useState('')
+    console.log('searchQuery:', searchQuery)
 
 // Fetching data from Json Server
    const fetchdata = async(url)=>{
         try {
             setLoading(true);
             const final = await fetch(url)
-            // console.log('final:', final)
             let res = await final.json();
             setData(res);
-            // console.log('res.data:', res)
             setLoading(false)            
            } catch (error) {
             console.log('error:', error)
@@ -64,7 +62,7 @@ function ProductMob(){
     }
 
     const handleAddCart=(item)=>{
-        let exist = false;
+        let exist = false ;
         const updatedCart = cartItem.map((cart)=>{
            if(cart.id === item.id){
                exist = true;
@@ -125,32 +123,54 @@ const handleWish=(item)=>{
         setPage(final)
     }
 
+    const [s,setS] = useState('')
+    console.log('s:', s)
+
+    const handleChange=(e)=>{
+        setS(e.target.value)
+    }
+
+    const handleSearch=()=>{
+        setSearchQuery(s);
+    }
+
+
     useEffect(()=>{
         let objPar= {page}
         if(orderBy){
             objPar.orderBy=orderBy
+        }else if (searchQuery){
+            objPar.q=searchQuery
         }
         setSearchParam(objPar);
-    },[page,orderBy])
+    },[page,orderBy,searchQuery])
 
     return loading ? (<Spinner thickness='5px' speed='0.75s' emptyColor='gray.200' color='blue.500' width={'250px'}
         height='250px' />) : (<div gap='10px'>
 
-        <GridItem  >
             <br />
         <Heading fontSize={'24px'} color='teal'>Welcome To Mobile Products Page</Heading>   
         <br />
-        <Input width={'20%'} variant='outline' placeholder='Search' value={searchQuery} onChange={(e)=>setSearchQuery(e.target.value)} />
-        <Button onClick={()=>{setOrderBy('asc') ; setPage(1)}} marginLeft={'700px'} marginRight={'10px'} >Sorting Low to High</Button>
-        <Button onClick={()=>{setOrderBy('desc') ; setPage(1)}} marginRight={'10px'} >Sorting High to Low</Button>
-        <Button onClick={()=>{setOrderBy('');setPage(1)}}>Reset</Button>
-        </GridItem>
+        <Center >
+        <SimpleGrid columns={[1,1,1,2,2]} gap='10%' justifyContent='space-between' width='80%'>
+        <Stack width={'75%'} direction={['column','column','row','row']}>
+        <Input variant='outline'placeholder='Search' value={s} onChange={handleChange} />
+        <Button onClick={handleSearch}>Enter</Button>
+        </Stack>
+        <Stack width={'100%'} direction={['column','column','row','row']}>
+        <Button onClick={()=>{setOrderBy('asc') ; setPage(1)}} >Sorting Low to High</Button>
+        <Button onClick={()=>{setOrderBy('desc') ; setPage(1)}} >Sorting High to Low</Button>
+        <Button onClick={()=>{setOrderBy('');setPage(1)}}>Reset Page</Button>
+        <br />
+        </Stack>
+        </SimpleGrid>
+        </Center>
 
-
-        <Grid templateColumns={['repeat(1, 1fr)','repeat(2, 1fr)','repeat(3, 1fr)','repeat(4, 1fr)']} gap={6} padding='3% 10% 3% 10%'>
+       <Grid templateColumns={['repeat(1, 1fr)','repeat(2, 1fr)','repeat(3, 1fr)','repeat(4, 1fr)']} gap={6} padding='3% 10% 3% 10%'>
         {data?.map((el)=>( 
+        
            <GridItem boxShadow= 'rgba(0, 0, 0, 0.35) 0px 5px 15px' borderRadius={'25px'} key={el.id} padding='10px'>
-            <Image src={el.imageUrl} borderTopRadius={'25px'} height={'250px'} width='100%' />
+            <Goto to={`/productMob/${el.id}`} ><Image src={el.imageUrl} borderTopRadius={'25px'} height={'250px'} width='100%' /> </Goto>
             <Heading noOfLines={1} fontSize={'18px'}>{el.brandName}</Heading> 
             <br />
             <hr />
@@ -171,6 +191,7 @@ const handleWish=(item)=>{
             <Button onClick={()=>handleWish(el)} color='black' bg='red.400' fontSize={20}><FaHeart/></Button>
             </Grid>
            </GridItem>
+       
         ))}
         </Grid >
         <Button isDisabled={page===1} onClick={()=>handlePageChange(-1)}>Prev</Button>
