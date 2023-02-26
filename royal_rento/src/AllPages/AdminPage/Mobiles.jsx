@@ -49,10 +49,10 @@ function Mobiles(){
         fetchMobData() 
         if(res.status == 200){
         setVisble(!visible);
-        // alert('Item Added Sucessfully !')
         setId('')
+        // alert('Item Added Sucessfully !')
         }
-    });
+    }).catch((err)=>alert('Id Not Found , Please check and try Again'));
         
       }
 
@@ -90,8 +90,6 @@ function Mobiles(){
          <form onSubmit={handleDelete}> 
          <FormLabel>Product ID </FormLabel>
           <Input type='number' placeholder='Enter The Product ID' value={deleteId} onChange={(e)=>setId(e.target.value)} />
-          {/* <FormLabel>Product Name</FormLabel>
-        <Input type='text' placeholder='Enter The Product Name' onChange={(e)=> e.target.value} /> */}
           <br />
           <br />
             {/* <CompExample/> */}

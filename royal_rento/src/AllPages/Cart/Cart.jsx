@@ -1,7 +1,6 @@
 import { Button, Heading, HStack, Image, Text, VStack, GridItem, SimpleGrid } from '@chakra-ui/react';
 import { React, useContext, useEffect, useState } from 'react';
 import { authState } from './../../Context/AuthContext';
-import SampleCart from './SampleCart';
 import {Link as Goto} from 'react-router-dom'
 
 function Cart(){
@@ -44,15 +43,14 @@ const removeCart=(id)=>{
             <br />
         <Heading color={'teal'}>Welcome To Cart Page</Heading>
         <br />
-        <SimpleGrid columns={[1,1,2,3,3]} gap='30%' padding='10px' style={{display:'grid' , color: 'red',width:'95%', gap:'10px'}}>
+        {cartData.length ? <SimpleGrid columns={[1,1,2,3,3]} gap='30%' padding='10px' style={{display:'grid' , color: 'red',width:'95%', gap:'10px'}}>
         <GridItem colSpan={[1,1,2,2]}  >
         {cartData?.map((item)=><HStack justify={'space-around'} key={item.id} height='120px' style={{border:'1px solid teal', marginBottom:'5px', padding:'40px'}}>
          <VStack align='left' width={'20%'}>
          <Image width={'50px'} src={item.imageUrl} alt={item.brand} />
          <Text noOfLines={1} textDecoration={'underline'} textDecorationColor={'teal'}>{item.brandName}</Text>
          </VStack>
-            
-            {/* {setCartAmount(cartAmount+item.price)} */}
+        
          <VStack color='black' width={'20%'} align='right'>
          <Button fontSize={'14px'}>Price : ₹ {item.price*item.count}</Button> 
          <Button fontSize={'14px'}>Tenure : {item.tenure} Months</Button>
@@ -74,8 +72,8 @@ const removeCart=(id)=>{
             <Button><Goto to='/checkout'>Check Out</Goto></Button>
          </GridItem>
         </SimpleGrid>
-        <HStack justify={'space-around'}>
-        </HStack>
+        :<div> <br /> <Heading color={'blue.500'}>( ◕‿◕ ) ____________ It's ➠ Empty! ____________ ( ◕‿◕ )</Heading> <br />  <br />
+        </div> }
     </div> )}
 
 export default Cart ;

@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { React, useEffect, useState, useContext } from 'react';
-import { Grid,GridItem,Text,Image,Heading,Button,Input,Spinner,Select } from '@chakra-ui/react';
+import { Grid,GridItem,Text,Image,Heading,Button,Input,Spinner,Select, Flex, Box } from '@chakra-ui/react';
 import { Link , useNavigate , useSearchParams } from 'react-router-dom';
 import { authState } from './../../Context/AuthContext';
 import { FaCartPlus, FaHeart } from 'react-icons/fa';
@@ -29,7 +29,7 @@ const getUrl=(url,sort,orderBy,search)=>{
 }
 
 function ProductFitness(){
-    const {setCartItemContFit,setWishDataFit} = useContext(authState);
+    const {setCartItemCont,setWishData} = useContext(authState);
     const [data,setData] = useState([]) ;
     // console.log('dataAfter:', data)
     const [loading,setLoading]=useState(false) ;
@@ -42,10 +42,10 @@ function ProductFitness(){
     const [cartItem,setCartItem] = useState([]) ;
 
     // For Wish List
-    setWishDataFit(cart)
+    setWishData(cart)
 
     // For Cart
-    setCartItemContFit(cartItem);
+    setCartItemCont(cartItem);
 
     const [searchQuery,setSearchQuery] =useState('')
 
@@ -134,7 +134,7 @@ const handleWish=(item)=>{
 
         <GridItem  >
             <br />
-        <Heading>Welcome To Products Page</Heading>   
+        <Heading fontSize={'24px'} color='teal'>Welcome To Fitness Equipements Page</Heading>   
         <br />
         <Input width={'20%'} variant='outline' placeholder='Search' value={searchQuery} onChange={(e)=>setSearchQuery(e.target.value)} />
         <Button onClick={()=>{setOrderBy('asc') ; setPage(1)}} marginLeft={'700px'} marginRight={'10px'} >Sorting Low to High</Button>
@@ -145,14 +145,23 @@ const handleWish=(item)=>{
 
         <Grid templateColumns={['repeat(1, 1fr)','repeat(2, 1fr)','repeat(3, 1fr)','repeat(4, 1fr)']} gap={6} padding='3% 10% 3% 10%'>
         {data?.map((el)=>( 
-           <GridItem boxShadow= 'rgba(0, 0, 0, 0.35) 0px 5px 15px' borderRadius={'25px'} key={el.id}>
-            <Image src={el.imageUrl} borderTopRadius={'25px'} height={'290px'} width='100%' />
+           <GridItem boxShadow= 'rgba(0, 0, 0, 0.35) 0px 5px 15px' borderRadius={'25px'} key={el.id} padding='10px'>
+            <Image src={el.imageUrl} borderTopRadius={'25px'} height={'250px'} width='100%' />
             <Heading noOfLines={1} fontSize={'18px'}>{el.brandName}</Heading> 
+            <br />
+            <hr />
+            <Flex justify={'space-between'} borderRadius='18px' border='1px solid teal' padding='5px'>
+            <Box >
             <Text>Tenure</Text>
-            <Button isDisabled={el.tenure==6} onClick={()=>{handelTenure(-6,el.id)}}>-</Button>
-            <Button isDisabled={true} padding='5%'>{el.tenure}</Button>
-            <Button isDisabled={el.tenure==12} onClick={()=>{handelTenure(6,el.id)}}>+</Button>
-            <Text>Price : ₹ {el.tenure==6 ? (1*(el.price)) : Math.floor(1*(el.price)*0.90)}/mo </Text> 
+            <Button isDisabled={el.tenure==6} color='teal' onClick={()=>{handelTenure(-6,el.id)}}>-</Button>
+            <Button bg={'white'} color='red' padding='5%'>{el.tenure}</Button>
+            <Button isDisabled={el.tenure==12} color='teal' onClick={()=>{handelTenure(6,el.id)}}>+</Button>
+               </Box>
+               <Box>
+               <Text >Price  <br />
+                <Button>₹ {el.tenure==6 ? (1*(el.price)) : Math.floor(1*(el.price)*0.90)}/mo</Button> </Text>
+               </Box>
+            </Flex> 
             <Grid templateColumns='repeat(2, 1fr)' gap={'100px'} padding='5%'>
             <Button onClick={()=>handleAddCart(el)} color='black' bg='red.400' fontSize={20}><FaCartPlus/></Button>
             <Button onClick={()=>handleWish(el)} color='black' bg='red.400' fontSize={20}><FaHeart/></Button>

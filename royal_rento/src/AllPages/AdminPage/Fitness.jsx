@@ -5,6 +5,7 @@ import axios from 'axios'
 import { Navigate } from 'react-router-dom';
 // import { authState } from '../Contexts/AuthContext';
 import {Link as Goto} from 'react-router-dom'
+import { AddingStatus, CompExample, Incorrect } from './Alert';
 
 function FitnessEquip(){
 
@@ -13,6 +14,8 @@ function FitnessEquip(){
     console.log('fitFinal:', fitFinal)
     // console.log('final:', final)
     const [deleteFitId,setId] = useState('');
+    const [visibleAdd,setVisbleAdd] = useState(false);
+    const [visible,setVisble] = useState(false);
 
     // console.log('deleteId:', deleteId)
         
@@ -22,7 +25,8 @@ function FitnessEquip(){
         ...fitData
       }).then((res)=>{
         fetchFitData()
-        setData({'tenure':'','brandName':'', 'price':'', 'imageUrl':''})
+        setData({'tenure':'','brandName':'', 'price':'', 'imageUrl':''});
+        setVisbleAdd(!visibleAdd);
       })
     }
 
@@ -39,7 +43,13 @@ function FitnessEquip(){
       axios.delete(`https://royalrento.onrender.com/fitness/${deleteFitId}`)
       .then((res)=>{
         fetchFitData()
-        setId('') });
+        if(res.status == 200){
+          console.log(res)
+        setVisble(!visible);
+        setId('')
+        } 
+          // setincorrectId(!incorrectId)
+        }).catch((err)=>alert('Id Not Found , Please check and try Again'));
       }
 
 
@@ -62,6 +72,8 @@ function FitnessEquip(){
         <br />
         <br />
         <Button type='submit'>Add Equipements </Button>
+        <br /><br />
+        {visibleAdd?<AddingStatus visibleAdd={visibleAdd} setVisbleAdd={setVisbleAdd}/>:''}
         </form>
         </GridItem>
 
@@ -78,6 +90,8 @@ function FitnessEquip(){
           <br />
           <br />
          <Button type='submit' >Delete Equipement</Button>
+         <br />
+         {visible?<CompExample setVisble={setVisble} visible={visible}/>:''}
         </form>
         </GridItem>
 
