@@ -14,7 +14,7 @@ function Furniture(){
 
     const hanldeFrunSubmit=(e)=>{
       e.preventDefault();
-      axios.post(`http://localhost:8080/furnitures`,{
+      axios.post(`https://royalrento.onrender.com/furnitures`,{
         ...furnData
       }).then((res)=>{
         fetchFurnData()
@@ -27,12 +27,12 @@ function Furniture(){
     },[])
 
     const fetchFurnData=()=>{
-      axios.get(`http://localhost:8080/furnitures`)
+      axios.get(`https://royalrento.onrender.com/furnitures`)
       .then((res)=>setFurnFinal(res.data) );}
 
     const handleFurnDelete=(e)=>{
       e.preventDefault();
-      axios.delete(`http://localhost:8080/furnitures/${deleteFurnId}`)
+      axios.delete(`https://royalrento.onrender.com/furnitures/${deleteFurnId}`)
       .then((res)=>{
         fetchFurnData()
         // setFurnId('') 

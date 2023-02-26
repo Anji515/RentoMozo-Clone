@@ -23,7 +23,7 @@ function Mobiles(){
         
     const hanldeSubmit=(e)=>{
       e.preventDefault();
-      axios.post(`http://localhost:8080/mobiles`,{
+      axios.post(`https://royalrento.onrender.com/mobiles`,{
         ...fData
       }).then((res)=>{
         fetchMobData()
@@ -38,12 +38,12 @@ function Mobiles(){
     },[])
 
     const fetchMobData=()=>{
-      axios.get(`http://localhost:8080/mobiles`)
+      axios.get(`https://royalrento.onrender.com/mobiles`)
       .then((res)=>setFinal(res.data) );}
 
     const handleDelete=(e)=>{
       e.preventDefault();
-      axios.delete(`http://localhost:8080/mobiles/${deleteId}`)
+      axios.delete(`https://royalrento.onrender.com/mobiles/${deleteId}`)
       .then((res)=>{
         console.log('res:', res)
         fetchMobData() 

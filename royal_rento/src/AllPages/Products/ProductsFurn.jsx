@@ -98,7 +98,7 @@ const handleWish=(item)=>{
 }
 
     useEffect(()=>{
-        let apiUrl = getUrl(`http://localhost:8080/furnitures?_page=${page}&_limit=8`,
+        let apiUrl = getUrl(`https://royalrento.onrender.com/furnitures?_page=${page}&_limit=8`,
         sort,
         orderBy,
         searchQuery

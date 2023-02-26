@@ -1,9 +1,8 @@
-import axios from 'axios';
 import { React, useEffect, useState, useContext } from 'react';
 import { Grid, GridItem, Text, Image, Heading, Button, Input, Spinner, Select, Box, Flex } from '@chakra-ui/react';
-import { Link , useNavigate , useSearchParams } from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
 import { authState } from './../../Context/AuthContext';
-import { FaArchive, FaBacon, FaCartPlus, FaChartBar, FaHeart, FaWarehouse } from 'react-icons/fa';
+import {  FaCartPlus,FaHeart} from 'react-icons/fa';
 
 function getVal(val){
     let pages=+val
@@ -100,7 +99,7 @@ const handleWish=(item)=>{
 }
 
     useEffect(()=>{
-        let apiUrl = getUrl(`http://localhost:8080/mobiles?_page=${page}&_limit=8`,
+        let apiUrl = getUrl(`https://royalrento.onrender.com/mobiles?_page=${page}&_limit=8`,
         sort,
         orderBy,
         searchQuery

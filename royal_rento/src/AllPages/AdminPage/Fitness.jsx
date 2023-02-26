@@ -18,7 +18,7 @@ function FitnessEquip(){
         
     const hanldeFitSubmit=(e)=>{
       e.preventDefault();
-      axios.post(`http://localhost:8080/fitness`,{
+      axios.post(`https://royalrento.onrender.com/fitness`,{
         ...fitData
       }).then((res)=>{
         fetchFitData()
@@ -31,12 +31,12 @@ function FitnessEquip(){
     },[])
 
     const fetchFitData=()=>{
-      axios.get(`http://localhost:8080/fitness`)
+      axios.get(`https://royalrento.onrender.com/fitness`)
       .then((res)=>setFinal(res.data) );}
 
     const handleDelete=(e)=>{
       e.preventDefault();
-      axios.delete(`http://localhost:8080/fitness/${deleteFitId}`)
+      axios.delete(`https://royalrento.onrender.com/fitness/${deleteFitId}`)
       .then((res)=>{
         fetchFitData()
         setId('') });
