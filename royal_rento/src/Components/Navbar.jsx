@@ -49,7 +49,7 @@ export default function Navbar() {
   }
 
      useEffect(()=>{
-      let apiUrl = getUrl(`http://localhost:8080/AllProducts`,
+      let apiUrl = getUrl(`https://royalrento.onrender.com/AllProducts`,
       searchQuery
     )
      fetchdata(apiUrl)
