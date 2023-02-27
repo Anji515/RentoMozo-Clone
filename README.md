@@ -2,8 +2,6 @@
 React.JS
 # Project_Name :- Royal_Rento 
 
-   ### Deployed Link :- [https://royal-rento.vercel.app/]
-
    ### `Logo` : - [https://i.ibb.co/StxKCFC/fortunate-fog-6612.jpg]
 
    ### `Project Code` :- [fortunate-fog-6612]
