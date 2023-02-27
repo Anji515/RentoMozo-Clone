@@ -1,5 +1,5 @@
 import Carousel from "../../Components/HomePageComp/Carousel";
-import {Image, Text, SimpleGrid, VStack, Center, GridItem, Heading, Box, Flex, Button} from '@chakra-ui/react';
+import {Image, Text, SimpleGrid, VStack, Center, GridItem, Grid,Heading, Box, Flex, Button} from '@chakra-ui/react';
 import GridBlurredBackdrop from "./Reviews";
 import {Link as Goto} from 'react-router-dom'
 
@@ -60,7 +60,8 @@ function Home(){
     ]
 
 
-    return(<>
+    return(
+    <>
     <Carousel/>
     <Center align='center'>
     <SimpleGrid width={'80%'} margin='auto' padding='20px' columnGap='20px' gridTemplateColumns={['1fr','1fr 1fr','1fr 1fr','1fr 1fr 1fr','1fr 1fr 1fr 1fr','1fr 1fr 1fr 1fr 1fr 1fr']}>
@@ -123,7 +124,6 @@ function Home(){
         </SimpleGrid>
     </Center>
     <GridBlurredBackdrop/>
-
     </>)
 }
 

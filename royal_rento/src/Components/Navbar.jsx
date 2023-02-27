@@ -1,12 +1,22 @@
 import {Box,Flex,Text,Button,Stack,Image,Input,useColorModeValue,useBreakpointValue, FormControl, Select} from '@chakra-ui/react';
 import { SearchIcon} from '@chakra-ui/icons';
-import {Link as Goto, useNavigate} from 'react-router-dom'
-import { useContext, useState } from 'react';
+import {Link as Goto, useNavigate, useSearchParams} from 'react-router-dom'
+import { useContext, useEffect, useState } from 'react';
 import { authState } from '../Context/AuthContext';
+
+const getUrl=(url,search)=>{
+   
+  if(search){
+      return (url=`${url}?q=${search}`)
+  }
+  return url;
+}
+
 
 export default function Navbar() {
     
-    const {isAuth} = useContext(authState)
+    const {isAuth,dataInput,SetDataInput,handleLoading} = useContext(authState)
+    console.log('dataInput:', dataInput)
 
     const navigate = useNavigate();
        const [admin,setAdmin] = useState('login')
@@ -20,6 +30,55 @@ export default function Navbar() {
             navigate('/loginuser')
          }
     }
+
+    // Search Functionality
+    let [searchParam,setSearchParam] = useSearchParams()
+    const [searchQuery,setSearchQuery] =useState('')
+    console.log('searchQuery:', searchQuery)
+
+    const fetchdata = async(url)=>{
+      try {
+          handleLoading(true);
+          const final = await fetch(url)
+          let res = await final.json();
+          SetDataInput(res);
+          handleLoading(false)            
+         } catch (error) {
+          console.log('error:', error)
+      }
+  }
+
+     useEffect(()=>{
+      let apiUrl = getUrl(`http://localhost:8080/AllProducts`,
+      searchQuery
+    )
+     fetchdata(apiUrl)
+   },[searchQuery])
+
+    const [s,setS] = useState('')
+    console.log('s:', s)
+
+    const handleInput=(e)=>{
+        setS(e.target.value)
+
+    }
+
+    const handleSearch=()=>{
+        setSearchQuery(s);
+        navigate('/results')
+        setS('')
+    }
+
+
+    useEffect(()=>{
+        let objPar= {}
+        if (searchQuery){
+            objPar.q=searchQuery
+        }
+        setSearchParam(objPar);
+    },[searchQuery])
+
+
 
     const Cities = ['Banglore','Hyderabad','Delhi','Mumbai','Pune','Noida','Gurgaon','Chennai','Ahmedabada','Jaipur','GhandiNagar','Kolkata','Mysore','Faridabad','Gaziabad']
   
@@ -60,11 +119,6 @@ export default function Navbar() {
       <Stack  marginTop={'25px'} fontSize='19px' fontWeight='490' marginLeft={'20px'}
           direction={'row'}
           spacing={6} >
-      {/* <Text><Goto to='/products'>Products</Goto></Text>
-      <Text>Planning</Text>
-      <Text><CalendarIcon/><Goto to='/appointment'>BookAppointment</Goto> </Text>
-      <Text>Hot Deals</Text>
-      <Text>About</Text>   */}
       </Stack>
       </Flex>
       
@@ -76,8 +130,8 @@ export default function Navbar() {
           marginRight ='15px'
           alignItems={'center'}
           >
-        <Input variant='outline' width={['125px','250px','350px','450px','550px']} placeholder='Search' />
-        <SearchIcon width={'25px'} color={'teal'}/>
+        <Input variant='filled' value={s} onChange={handleInput} width={['125px','250px','350px','450px','550px']}  placeholder='Search' />
+        <SearchIcon onClick={handleSearch} width={'25px'} color={'teal'}/>
       </Box>
 
       <Stack

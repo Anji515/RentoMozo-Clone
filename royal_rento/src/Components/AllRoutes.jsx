@@ -20,6 +20,7 @@ import Cart from './../AllPages/Cart/Cart';
 import Checkout from './../AllPages/CheckOut/Checkout';
 import SingleUserPage from '../AllPages/Products/SingleProductPage';
 import SingleProductFurn from '../AllPages/Products/SingleProductFurn';
+import SearchInput from '../AllPages/HomePage/ShowOnSearch';
 
 function AllRoutes(){
     return(
@@ -118,6 +119,11 @@ function AllRoutes(){
                 //    <PrivateRoute>
                         <WishList/>
                 //    </PrivateRoute>
+        }/>
+         <Route path='/results' element={
+                   <PrivateRoute>
+                        <SearchInput/>
+                   </PrivateRoute>
         }/>
     </Routes>
 

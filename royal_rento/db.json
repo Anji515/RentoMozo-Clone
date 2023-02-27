@@ -403,5 +403,409 @@
       "tenure": 6,
       "id": 13
     }
-  ]
+  ],
+    "AllProducts": [
+      {
+        "brandName": "Apple iPhone XR 64GB (Black)",
+        "price": 1839,
+        "imageUrl": "https://p.rmjo.in/productSquare/vmbb6qhr-500x500.jpg",
+        "tenure": 6,
+        "id": 1
+      },
+      {
+        "brandName": "Apple iPhone 11 Pro (Midnight Green)",
+        "price": 3349,
+        "imageUrl": "https://p.rmjo.in/productSquare/byeagjss-500x500.jpg",
+        "tenure": 6,
+        "id": 2
+      },
+      {
+        "brandName": "OnePlus 7 (Mirror Gray)",
+        "price": 1109,
+        "imageUrl": "https://p.rmjo.in/productSquare/lbf7407m-500x500.jpg",
+        "tenure": 6,
+        "id": 3
+      },
+      {
+        "brandName": "Redmi K20 Pro (Carbon Black)",
+        "price": 929,
+        "imageUrl": "https://p.rmjo.in/productSquare/yhx594uv-500x500.jpg",
+        "tenure": 6,
+        "id": 4
+      },
+      {
+        "brandName": "Samsung Galaxy Note 10 (Aura Black)",
+        "price": 2229,
+        "imageUrl": "https://p.rmjo.in/productSquare/fhonufah-500x500.jpg",
+        "tenure": 6,
+        "id": 5
+      },
+      {
+        "brandName": "Apple iPhone X (Silver)",
+        "price": 3039,
+        "imageUrl": "https://p.rmjo.in/productSquare/glmhtqql-500x500.jpg",
+        "tenure": 6,
+        "id": 6
+      },
+      {
+        "brandName": "OnePlus 6T (Mirror Black)",
+        "price": 1199,
+        "imageUrl": "https://p.rmjo.in/productSquare/6o3lg8ky-500x500.jpg",
+        "tenure": 6,
+        "id": 7
+      },
+      {
+        "brandName": "Oppo F11 Pro (Thunder Black)",
+        "price": 759,
+        "imageUrl": "https://p.rmjo.in/productSquare/ng1wgdjv-500x500.jpg",
+        "tenure": 6,
+        "id": 8
+      },
+      {
+        "brandName": "OnePlus 7T ( Frosted Silver )",
+        "price": 1309,
+        "imageUrl": "https://p.rmjo.in/productSquare/d0ecgei2-500x500.jpg",
+        "tenure": 6,
+        "id": 9
+      },
+      {
+        "brandName": "Galaxy A50 (Blue)",
+        "price": 619,
+        "imageUrl": "https://p.rmjo.in/productSquare/bvpxqjj5-500x500.jpg",
+        "tenure": 6,
+        "id": 10
+      },
+      {
+        "brandName": "Galaxy Note 8 (Black)",
+        "price": 1749,
+        "imageUrl": "https://p.rmjo.in/productSquare/xxdjq0k2-500x500.jpg",
+        "tenure": 6,
+        "id": 11
+      },
+      {
+        "brandName": "Samsung Galaxy A50 (White, 6GB RAM)",
+        "price": 739,
+        "imageUrl": "https://p.rmjo.in/productSquare/nmc2vcgx-500x500.jpg",
+        "tenure": 6,
+        "id": 12
+      },
+      {
+        "brandName": "Apple iPhone 11 (Black)",
+        "price": 2159,
+        "imageUrl": "https://p.rmjo.in/productSquare/0ojmk2oq-500x500.jpg",
+        "tenure": 6,
+        "id": 13
+      },
+      {
+        "brandName": "Samsung Galaxy S10 (Prism Black)",
+        "price": 1929,
+        "imageUrl": "https://p.rmjo.in/productSquare/goiz4ziw-500x500.jpg",
+        "tenure": 6,
+        "id": 14
+      },
+      {
+        "brandName": "Vivo V11 Pro ( Gold )",
+        "price": 839,
+        "imageUrl": "https://p.rmjo.in/productSquare/qmf066y6-500x500.jpg",
+        "tenure": 6,
+        "id": 15
+      },
+      {
+        "brandName": "Redmi K20 Pro (Blue)",
+        "price": 1049,
+        "imageUrl": "https://p.rmjo.in/productSquare/0a2dwyu2-500x500.jpg",
+        "tenure": 6,
+        "id": 16
+      },
+      {
+        "brandName": "Oppo Reno 2 Z (Luminous Black)",
+        "price": 969,
+        "imageUrl": "https://p.rmjo.in/productSquare/40nn18do-500x500.jpg",
+        "tenure": 6,
+        "id": 17
+      },
+      {
+        "brandName": "Oppo A7 ( Glaring Gold )",
+        "price": 579,
+        "imageUrl": "https://p.rmjo.in/productSquare/fycty5jp-500x500.jpg",
+        "tenure": 6,
+        "id": 18
+      },
+      {
+        "brandName": "Galaxy Note 9 (Blue)",
+        "price": 2319,
+        "imageUrl": "https://p.rmjo.in/productSquare/d7kwvrrk-500x500.jpg",
+        "tenure": 6,
+        "id": 19
+      },
+      {
+        "brandName": "Samsung Galaxy A70 (Blue)",
+        "price": 979,
+        "imageUrl": "https://p.rmjo.in/productSquare/ioqc6iq4-500x500.jpg",
+        "tenure": 6,
+        "id": 20
+      },
+      {
+        "brandName": "Queen Foam Mattress (6x5)",
+        "price": 299,
+        "imageUrl": "https://p.rmjo.in/productSquare/gfrxanei-500x500.jpg",
+        "tenure": 6,
+        "id": 21
+      },
+      {
+        "brandName": "Queen Coir & Foam Mattress (6x5)",
+        "price": 329,
+        "imageUrl": "https://p.rmjo.in/productSquare/iurdarhq-500x500.jpg",
+        "tenure": 6,
+        "id": 22
+      },
+      {
+        "brandName": "Single Coir and Foam Mattress (6x3)",
+        "price": 199,
+        "imageUrl": "https://p.rmjo.in/productSquare/zkq62ehq-500x500.jpg",
+        "tenure": 6,
+        "id": 23
+      },
+      {
+        "brandName": "King Coir & Foam Mattress (6.6x6)",
+        "price": 399,
+        "imageUrl": "https://p.rmjo.in/productSquare/63ua3tco-500x500.jpg",
+        "tenure": 6,
+        "id": 24
+      },
+      {
+        "brandName": "King Ortho Memory Foam Mattress by Wakefit (6.6x6)",
+        "price": 779,
+        "imageUrl": "https://p.rmjo.in/moodShot/wvlq2vbr-1024x512.jpg",
+        "tenure": 6,
+        "id": 25
+      },
+      {
+        "brandName": "Queen Ortho Pocket Spring Mattress (6x6)",
+        "price": 669,
+        "imageUrl": "https://p.rmjo.in/productSquare/4zfj283m-500x500.jpg",
+        "tenure": 6,
+        "id": 26
+      },
+      {
+        "brandName": "Napster Metal Single Bed (6x3)",
+        "price": 299,
+        "imageUrl": "https://p.rmjo.in/productSquare/u8c7uurw-500x500.jpg",
+        "tenure": 6,
+        "id": 27
+      },
+      {
+        "brandName": "Poise Wooden Queen Bed (6x5)",
+        "price": 589,
+        "imageUrl": "https://p.rmjo.in/productSquare/vqk0pl4e-500x500.jpg",
+        "tenure": 6,
+        "id": 28
+      },
+      {
+        "brandName": "Poise 4-Seater Dining Table & Chairs",
+        "price": 889,
+        "imageUrl": "https://p.rmjo.in/productSquare/0ahsljnf-500x500.jpg",
+        "tenure": 6,
+        "id": 29
+      },
+      {
+        "brandName": "Felix 3-Seater Fabric Sofa (Blue)",
+        "price": 889,
+        "imageUrl": "https://p.rmjo.in/productSquare/ak5an4dd-500x500.jpg",
+        "tenure": 6,
+        "id": 30
+      },
+      {
+        "brandName": "Rex 3-Seater Leather Sofa (Black)",
+        "price": 739,
+        "imageUrl": "https://p.rmjo.in/productSquare/rdkbbjk9-500x500.jpg",
+        "tenure": 6,
+        "id": 31
+      },
+      {
+        "brandName": "Felix 1-Seater Fabric Sofa (Blue)",
+        "price": 429,
+        "imageUrl": "https://p.rmjo.in/productSquare/i4czb0u1-500x500.jpg",
+        "tenure": 6,
+        "id": 32
+      },
+      {
+        "brandName": "Casper 3-Seater Fabric Sofa (Grey)",
+        "price": 809,
+        "imageUrl": "https://p.rmjo.in/productSquare/zahqe0d1-500x500.jpg",
+        "tenure": 6,
+        "id": 33
+      },
+      {
+        "brandName": "Brooklyn L-Shaped Fabric Sofa (Blue)",
+        "price": 1339,
+        "imageUrl": "https://p.rmjo.in/productSquare/sc4mwkso-500x500.jpg",
+        "tenure": 6,
+        "id": 34
+      },
+      {
+        "brandName": "Roma 3-Seater Fabric Sofa (Dark Blue)",
+        "price": 1159,
+        "imageUrl": "https://p.rmjo.in/productSquare/tcmflk16-500x500.jpg",
+        "tenure": 6,
+        "id": 35
+      },
+      {
+        "brandName": "Kipper Wooden Queen Bed (6x5)",
+        "price": 919,
+        "imageUrl": "https://p.rmjo.in/productSquare/g55dhb67-500x500.jpg",
+        "tenure": 6,
+        "id": 36
+      },
+      {
+        "brandName": "Cheshire Fabric Sofa cum Bed (Green)",
+        "price": 1189,
+        "imageUrl": "https://p.rmjo.in/productSquare/hszr31ug-500x500.jpg",
+        "tenure": 6,
+        "id": 37
+      },
+      {
+        "brandName": "Stowy 2-Door Wardrobe",
+        "price": 459,
+        "imageUrl": "https://p.rmjo.in/productSquare/s31yoe0u-500x500.jpg",
+        "tenure": 6,
+        "id": 38
+      },
+      {
+        "brandName": "Betty Dresser with Stool",
+        "price": 219,
+        "imageUrl": "https://p.rmjo.in/productSquare/0jw4x00m-500x500.jpg",
+        "tenure": 6,
+        "id": 39
+      },
+      {
+        "brandName": "Watson Wooden Bedside Table",
+        "price": 199,
+        "imageUrl": "https://p.rmjo.in/productSquare/ix6yp793-500x500.jpg",
+        "tenure": 6,
+        "id": 40
+      },
+      {
+        "brandName": "Filbert Chest of Drawers",
+        "price": 269,
+        "imageUrl": "https://p.rmjo.in/productSquare/14bnldng-500x500.jpg",
+        "tenure": 6,
+        "id": 41
+      },
+      {
+        "brandName": "Poise Metal Table",
+        "price": 309,
+        "imageUrl": "https://p.rmjo.in/productSquare/wwsr1k5o-500x500.jpg",
+        "tenure": 6,
+        "id": 42
+      },
+      {
+        "brandName": "Tyler 6-Seater Dining Table & Chairs",
+        "price": 979,
+        "imageUrl": "https://p.rmjo.in/productSquare/0ipckdo0-500x500.jpg",
+        "tenure": 6,
+        "id": 43
+      },
+      {
+        "brandName": "Caramel 4-Seater Wooden Coffee Table",
+        "price": 619,
+        "imageUrl": "https://p.rmjo.in/productSquare/n6302ned-500x500.jpg",
+        "tenure": 6,
+        "id": 44
+      },
+      {
+        "brandName": "Foldable Treadmill TD-M4",
+        "price": 1299,
+        "imageUrl": "https://p.rmjo.in/productSquare/bk7tbcu2-500x500.jpg",
+        "tenure": 6,
+        "id": 45
+      },
+      {
+        "brandName": "Exercise Cycle AB-100",
+        "price": 279,
+        "imageUrl": "https://p.rmjo.in/productSquare/42v0ixqu-500x500.jpg",
+        "tenure": 6,
+        "id": 46
+      },
+      {
+        "brandName": "Motorized Treadmill AF-515",
+        "price": 1599,
+        "imageUrl": "https://p.rmjo.in/productSquare/zo83l86x-500x500.jpg",
+        "tenure": 6,
+        "id": 47
+      },
+      {
+        "brandName": "Auto Inclination Treadmill T-501",
+        "price": "1429",
+        "imageUrl": "https://p.rmjo.in/productSquare/jsxcydcf-500x500.jpg",
+        "tenure": "6",
+        "id": 48
+      },
+      {
+        "brandName": "Motorized Treadmill CTM 14A",
+        "price": 1419,
+        "imageUrl": "https://p.rmjo.in/productSquare/7ljj0ni2-500x500.jpg",
+        "tenure": 6,
+        "id": 49
+      },
+      {
+        "brandName": "Cross Trainer EH-400",
+        "price": 1009,
+        "imageUrl": "https://p.rmjo.in/productSquare/ykgyj4pt-500x500.jpg",
+        "tenure": 6,
+        "id": 50
+      },
+      {
+        "brandName": "Smart Magnetic Exercise Bike",
+        "price": 419,
+        "imageUrl": "https://p.rmjo.in/productSquare/k515c57w-500x500.jpg",
+        "tenure": 6,
+        "id": 51
+      },
+      {
+        "brandName": "Cross Trainer With Seat",
+        "price": "799",
+        "imageUrl": "https://p.rmjo.in/productSquare/am525ijh-500x500.jpg",
+        "tenure": 6,
+        "id": 52
+      },
+      {
+        "brandName": "Cross Trainer C-500",
+        "price": 749,
+        "imageUrl": "https://p.rmjo.in/productSquare/ffg0b4na-500x500.jpg",
+        "tenure": 6,
+        "id": 53
+      },
+      {
+        "brandName": "Motorized Treadmill AF 517",
+        "price": 1599,
+        "imageUrl": "https://p.rmjo.in/productSquare/04s9a186-500x500.jpg",
+        "tenure": 6,
+        "id": 54
+      },
+      {
+        "brandName": "Auto Inclination Treadmill TM-33",
+        "price": 1589,
+        "imageUrl": "https://p.rmjo.in/productSquare/8xvc6k5r-500x500.jpg",
+        "tenure": 6,
+        "id": 55
+      },
+      {
+        "brandName": "Crazy Fit Massager VP-500",
+        "price": "629",
+        "imageUrl": "https://p.rmjo.in/productSquare/68cb0ce2-500x500.jpg",
+        "tenure": 6,
+        "id": 56
+      },
+      {
+        "brandName": "Leg Massager IF-868",
+        "price": 909,
+        "imageUrl": "https://p.rmjo.in/productSquare/niqfc8xs-500x500.jpg",
+        "tenure": 6,
+        "id": 57
+      }
+    ]
 }
+
+
+
