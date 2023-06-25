@@ -12,7 +12,7 @@ import ProductFitness from '../AllPages/Products/ProductsFitness';
 import ProductFurn from '../AllPages/Products/ProductsFurn';
 import ProductMob from '../AllPages/Products/ProductsMob';
 import Signup from '../AllPages/SignUp';
-import PrivateRoute from './PrivateRoute';
+import PrivateRoute, { PrivateRouteUser } from './PrivateRoute';
 import ProductEss from './../AllPages/Products/ProductEss';
 import ProductBikes from './../AllPages/Products/ProductBike';
 import ProductApp from './../AllPages/Products/ProductApp';
@@ -29,36 +29,12 @@ function AllRoutes(){
         <Route path='/' element={<Home/>}/>
         <Route path='/loginadmin' element={<LoginAdmin/>} />
         <Route path='/loginuser' element={<LoginUser/>} /> 
-        <Route path='/productMob' element={
-                    <PrivateRoute>
-                        <ProductMob/>
-                    </PrivateRoute>
-        }/>
-        <Route path='/productFurn' element={
-                    <PrivateRoute>
-                        <ProductFurn/>
-                    </PrivateRoute>
-        }/>
-        <Route path='/productFitness' element={
-                    <PrivateRoute>
-                        <ProductFitness/>
-                    </PrivateRoute>
-        }/>
-        <Route path='/productEss' element={
-                    <PrivateRoute>
-                        <ProductEss/>
-                    </PrivateRoute>
-        }/>
-        <Route path='/productBike' element={
-                    <PrivateRoute>
-                        <ProductBikes/>
-                    </PrivateRoute>
-        }/>
-        <Route path='/productApp' element={
-                    <PrivateRoute>
-                        <ProductApp/>
-                    </PrivateRoute>
-        }/>
+        <Route path='/productMob' element={<ProductMob/>}/>
+        <Route path='/productFurn' element={<ProductFurn/>}/>
+        <Route path='/productFitness' element={<ProductFitness/>  }/>
+        <Route path='/productEss' element={<ProductEss/>}/>
+        <Route path='/productBike' element={<ProductBikes/>}/>
+        <Route path='/productApp' element={<ProductApp/>}/>
         <Route path='/admin' element={
                    <PrivateRoute>
                             <AdminPage/>
@@ -87,19 +63,19 @@ function AllRoutes(){
         }/> 
         {/* Single Pages */}
         <Route path='/productMob/:id' element={
-                <PrivateRoute>
+                <PrivateRouteUser>
                     <SingleUserPage/>
-                </PrivateRoute>
+                </PrivateRouteUser>
         }/> 
         <Route path='/productFurn/:id' element={
-                <PrivateRoute>
+                <PrivateRouteUser>
                     <SingleProductFurn/>
-                </PrivateRoute>
+                </PrivateRouteUser>
         }/> 
         <Route path='/productFitness/:id' element={
-                <PrivateRoute>
+                <PrivateRouteUser>
                     <SingleProductFurn/>
-                </PrivateRoute>
+                </PrivateRouteUser>
         }/> 
         {/* <Route path='/fitness' element={
             <PrivateRoute>
@@ -111,20 +87,16 @@ function AllRoutes(){
            </PrivateRoute>
          }/>  */}
         <Route path='/cart' element={
-        <PrivateRoute>
+        <PrivateRouteUser>
             <Cart/>
-        </PrivateRoute> 
+        </PrivateRouteUser> 
     }/>
         <Route path='/wishlist' element={
-                //    <PrivateRoute>
+                   <PrivateRouteUser>
                         <WishList/>
-                //    </PrivateRoute>
+                   </PrivateRouteUser>
         }/>
-         <Route path='/results' element={
-                   <PrivateRoute>
-                        <SearchInput/>
-                   </PrivateRoute>
-        }/>
+        <Route path='/results' element={<SearchInput/>}/>
     </Routes>
 
     )

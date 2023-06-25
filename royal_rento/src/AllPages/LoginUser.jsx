@@ -1,7 +1,30 @@
 import {Flex,Box,FormControl,FormLabel,Input,Checkbox,Stack,Link,Button,Heading,Text,useColorModeValue} from '@chakra-ui/react';
+import axios from 'axios';
+import { useState } from 'react';
 import {Link as Goto} from 'react-router-dom'
+import { authState } from '../Context/AuthContext';
+import { useContext } from 'react';
   
   export default function LoginUser() {
+    const [email,setEmail]=useState('')
+    const [password,setPassword]=useState('')
+    const {setUser,setShowUser}=useContext(authState);
+
+    const handleLogin=async()=>{
+      // console.log(obj)
+      axios.get(`https://expenses-app-tsr1.onrender.com/users?email=${email}&password=${password}`)
+        .then((res)=>{
+      if (res.data.length > 0) {
+        setUser(res.data[0].firstName)
+        alert('Login SuccessFull')
+        setShowUser(true)
+      } else {
+        alert('Wrong credentials !')
+      }}
+        )
+    
+    }
+
     return (
       <Flex
         minH={'100vh'}
@@ -23,11 +46,11 @@ import {Link as Goto} from 'react-router-dom'
             <Stack spacing={4}>
               <FormControl id="email">
                 <FormLabel>Email address</FormLabel>
-                <Input type="email" />
+                <Input type="email" value={email} onChange={(e)=>{setEmail(e.target.value)}} />
               </FormControl>
               <FormControl id="password">
                 <FormLabel>Password</FormLabel>
-                <Input type="password" />
+                <Input type="password" value={password} onChange={(e)=>{setPassword(e.target.value)}} />
               </FormControl>
               <Stack spacing={10}>
                 <Stack
@@ -38,6 +61,7 @@ import {Link as Goto} from 'react-router-dom'
                   <Link color={'blue.400'}>Forgot password?</Link>
                 </Stack>
                 <Button
+                  onClick={handleLogin}
                   bg={'blue.400'}
                   color={'white'}
                   _hover={{

@@ -3,10 +3,28 @@ import {Flex, Box,FormControl,FormLabel,Input,InputGroup,HStack,InputRightElemen
   import { useState } from 'react';
   import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
   import {Link as Goto} from 'react-router-dom'
+  import axios from 'axios';
 
 function Signup(){
     const [showPassword, setShowPassword] = useState(false);
+    const [firstName,setFirstName]=useState('')
+    const [lastName,setLastName]=useState('')
+    const [email,setEmail]=useState('')
+    const [password,setPassword]=useState('')
 
+    const handleSignup=async()=>{
+      let obj={
+        firstName,
+        lastName,
+        email,
+        password
+      }
+      console.log(obj)
+        axios.post('https://expenses-app-tsr1.onrender.com/users',obj)
+        .then((res)=>console.log(res.data))
+        .then(()=>alert('Signup Successful'))
+    }
+    
   return (
     <Flex
       minH={'100vh'}
@@ -32,24 +50,24 @@ function Signup(){
               <Box>
                 <FormControl id="firstName" isRequired>
                   <FormLabel>First Name</FormLabel>
-                  <Input type="text" />
+                  <Input type="text" value={firstName} onChange={(e)=>{setFirstName(e.target.value)}}/>
                 </FormControl>
               </Box>
               <Box>
                 <FormControl id="lastName">
                   <FormLabel>Last Name</FormLabel>
-                  <Input type="text" />
+                  <Input type="text" value={lastName} onChange={(e)=>{setLastName(e.target.value)}}/>
                 </FormControl>
               </Box>
             </HStack>
             <FormControl id="email" isRequired>
               <FormLabel>Email address</FormLabel>
-              <Input type="email" />
+              <Input type="email" value={email} onChange={(e)=>{setEmail(e.target.value)}}/>
             </FormControl>
             <FormControl id="password" isRequired>
               <FormLabel>Password</FormLabel>
               <InputGroup>
-                <Input type={showPassword ? 'text' : 'password'} />
+                <Input type={showPassword ? 'text' : 'password'} value={password} onChange={(e)=>{setPassword(e.target.value)}}/>
                 <InputRightElement h={'full'}>
                   <Button
                     variant={'ghost'}
@@ -63,6 +81,7 @@ function Signup(){
             </FormControl>
             <Stack spacing={10} pt={2}>
               <Button
+                onClick={handleSignup}
                 loadingText="Submitting"
                 size="lg"
                 bg={'blue.400'}

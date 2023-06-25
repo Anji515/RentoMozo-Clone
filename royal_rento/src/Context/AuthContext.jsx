@@ -5,6 +5,10 @@ function AuthContextProvider({children}) {
     const [loading,setLoading] = useState(false)
     const [isAuth,setAuth] = useState(false);
     const [token,setToken] = useState(null);
+    const [userName,setUser] = useState('');
+    const [user,setShowUser]=useState(false)
+    // console.log('user',user)
+    // console.log('userName',userName)
 
     //Cart and WhishList
     const [wishData,setWishData] = useState([]);
@@ -30,7 +34,7 @@ function AuthContextProvider({children}) {
         setToken(val3);
     }
     return(
-        <authState.Provider value={{wishData,setWishData,cartData,setCartItemCont,loginUser,logoutUser,handleLoading,handleToken,loading,token,isAuth,dataInput,SetDataInput}}>{children}</authState.Provider>
+        <authState.Provider value={{wishData,setWishData,userName,user,setUser,setShowUser,cartData,setCartItemCont,loginUser,logoutUser,handleLoading,handleToken,loading,token,isAuth,dataInput,SetDataInput}}>{children}</authState.Provider>
     )
 }
 

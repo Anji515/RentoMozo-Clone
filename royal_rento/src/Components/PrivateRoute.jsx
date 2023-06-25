@@ -14,3 +14,16 @@ function PrivateRoute({children}) {
 }
 
 export default PrivateRoute;
+
+function PrivateRouteUser({children}) {
+    const {user}=useContext(authState);
+
+    if(!user){
+        alert('Please login first')
+        return <Navigate to='/loginuser'/>
+    }
+
+    return children;
+}
+
+export {PrivateRouteUser};

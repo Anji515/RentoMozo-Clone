@@ -1,8 +1,9 @@
 import {Box,Flex,Text,Button,Stack,Image,Input,useColorModeValue,useBreakpointValue, FormControl, Select} from '@chakra-ui/react';
-import { SearchIcon} from '@chakra-ui/icons';
+import { SearchIcon, ViewIcon} from '@chakra-ui/icons';
 import {Link as Goto, useNavigate, useSearchParams} from 'react-router-dom'
 import { useContext, useEffect, useState } from 'react';
 import { authState } from '../Context/AuthContext';
+
 
 const getUrl=(url,search)=>{
    
@@ -15,7 +16,9 @@ const getUrl=(url,search)=>{
 
 export default function Navbar() {
     
-    const {isAuth,dataInput,SetDataInput,handleLoading} = useContext(authState)
+    const {isAuth,dataInput,SetDataInput,setShowUser,handleLoading,user,userName} = useContext(authState)
+    console.log('user',user)
+    console.log('userName',userName)
     console.log('dataInput:', dataInput)
 
     const navigate = useNavigate();
@@ -29,6 +32,11 @@ export default function Navbar() {
             setAdmin('As User');
             navigate('/loginuser')
          }
+    }
+
+    const handleLogout=()=>{
+      setShowUser(false);
+      alert('Succfully Logout !')
     }
 
     // Search Functionality
@@ -130,7 +138,7 @@ export default function Navbar() {
           marginRight ='15px'
           alignItems={'center'}
           >
-        <Input variant='filled' value={s} onChange={handleInput} width={['125px','250px','350px','450px','550px']}  placeholder='Search' />
+        <Input variant='filled' value={s} onChange={handleInput} width={'300px'}  placeholder='Search' />
         <SearchIcon onClick={handleSearch} width={'25px'} color={'teal'}/>
       </Box>
 
@@ -139,6 +147,21 @@ export default function Navbar() {
           justify={'flex-end'}
           direction={'row'}
           spacing={6}>
+        {user?<Button
+            fontSize={'25px'}
+            fontWeight={600}
+            color={'green'}
+            gap={'5px'}
+            bg={'none'}
+            // borderRadius={'50%'}
+            href={'#'}
+            // _hover={{
+            //   bg: 'pink.300',
+            // }}
+            >
+            <ViewIcon/> {userName}
+          </Button>:<Button display={'none'}></Button> }
+
         {isAuth ? <Button><Goto to='/admin'>Hello Admin</Goto></Button>:<Select width={'110px'} fontSize={'sm'}
         textAlign='center'
         value={admin}
@@ -148,18 +171,33 @@ export default function Navbar() {
           <option value="AsAdmin" > As Admin</option>
           <option value="AsUser">As User</option>
           </Select>}
-          <Button
+          {user?<Button
             // display={{ base: 'none', md: 'inline-flex' }}
             fontSize={'sm'}
             fontWeight={600}
+            onClick={handleLogout}
             color={'white'}
             bg={'pink.400'}
             href={'#'}
             _hover={{
               bg: 'pink.300',
             }}>
-            <Goto to='/signup' >Sign Up</Goto>
-          </Button>
+            Logout
+          </Button>:
+          <Button
+          // display={{ base: 'none', md: 'inline-flex' }}
+          fontSize={'sm'}
+          fontWeight={600}
+          color={'white'}
+          bg={'pink.400'}
+          href={'#'}
+          _hover={{
+            bg: 'pink.300',
+          }}>
+          <Goto to='/signup' >Sign Up</Goto>
+        </Button>
+          }
+          
           <Button background={'green.300'} color={'white'}><Goto to='/cart'>Cart</Goto></Button>
           <Button background={'grey'} color={'orange'}><Goto to='/wishlist'>Wish List</Goto></Button>
         </Stack>
