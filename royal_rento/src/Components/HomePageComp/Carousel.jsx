@@ -30,8 +30,8 @@ export default function Carousel(){
   return (
     <Box 
       position={'relative'}
-      height={'550px'}
-      width={['60%','75%','88%']}
+      height={['200px','400px','500px']}
+      width={['90%','90%','90%','88%']}
       margin='auto'
       marginTop='3px'
       overflow={'hidden'}
