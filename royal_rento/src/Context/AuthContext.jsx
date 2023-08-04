@@ -34,7 +34,7 @@ function AuthContextProvider({children}) {
         setToken(val3);
     }
     return(
-        <authState.Provider value={{wishData,setWishData,userName,user,setUser,setShowUser,cartData,setCartItemCont,loginUser,logoutUser,handleLoading,handleToken,loading,token,isAuth,dataInput,SetDataInput}}>{children}</authState.Provider>
+        <authState.Provider value={{user,wishData,setWishData,userName,user,setUser,setShowUser,cartData,setCartItemCont,loginUser,logoutUser,handleLoading,handleToken,loading,token,isAuth,dataInput,SetDataInput}}>{children}</authState.Provider>
     )
 }
 
