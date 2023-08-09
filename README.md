@@ -1,6 +1,6 @@
 # Project_Name :- Royal_Rento 
 
-   ##### Deployed Link :- ![URL](https://royal-rento.vercel.app/)
+   ##### Deployed Link :- [URL](https://royal-rento.vercel.app/)
 
    ##### Backend API : - [https://royalrento.onrender.com/]
    ##### Authentication API : - [https://freelancer-6ebn.onrender.com/]
