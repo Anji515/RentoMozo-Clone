@@ -27,7 +27,8 @@ import { useState } from "react";
 import { Link as Goto, useNavigate } from "react-router-dom";
 import { authState } from "../Context/AuthContext";
 import { useContext } from "react";
-import './Login.css'
+import './Login.css';
+
 
 export default function LoginUser() {
   const [email, setEmail] = useState("");
@@ -150,52 +151,19 @@ export default function LoginUser() {
                 <Link color={"blue.400"}>Forgot password?</Link>
               </Stack>
               <Button
-                onClick={handleLogin}
-                bg={"blue.400"}
-                color={"white"}
-                _hover={{
-                  bg: "blue.500",
-                }}
-              >
-                Sign in
-              </Button>
+              onClick={handleLogin}
+              bg={"blue.400"}
+              color={"white"}
+              _hover={{
+                bg: "blue.500",
+              }}
+              className="animated-button"
+            >
+              Sign in
+            </Button>
             </Stack>
           </Stack>
         </Box>
-        {/* <Modal isOpen={showSuccess} onClose={() => setShowSuccess(false)}>
-          <ModalOverlay />
-          <ModalContent>
-            <ModalHeader>Login Successful</ModalHeader>
-            <ModalBody>
-              <Alert status="success">
-                <AlertIcon />
-                You have successfully logged in.
-              </Alert>
-            </ModalBody>
-            <ModalFooter>
-              <Button colorScheme="blue" onClick={() => setShowSuccess(false)}>
-                Close
-              </Button>
-            </ModalFooter>
-          </ModalContent>
-        </Modal>
-        <Modal isOpen={showError} onClose={() => setShowError(false)}>
-          <ModalOverlay />
-          <ModalContent>
-            <ModalHeader>Login Failed</ModalHeader>
-            <ModalBody>
-              <Alert status="error">
-                <AlertIcon />
-                Incorrect email or password. Please try again.
-              </Alert>
-            </ModalBody>
-            <ModalFooter>
-              <Button colorScheme="blue" onClick={() => setShowError(false)}>
-                Close
-              </Button>
-            </ModalFooter>
-          </ModalContent>
-        </Modal> */}
       </Stack>
     </Flex>
   );
