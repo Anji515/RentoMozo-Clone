@@ -2,7 +2,8 @@
 
    ##### Deployed Link :- [https://royal-rento.vercel.app/]
 
-   ##### `Logo` : - [https://i.ibb.co/StxKCFC/fortunate-fog-6612.jpg]
+   ##### Backend API : - [https://royalrento.onrender.com/]
+   ##### Authentication API : - [https://freelancer-6ebn.onrender.com/]
 
    ##### `Project Code` :- [fortunate-fog-6612]
 
