@@ -62,6 +62,7 @@ function Home(){
 
     return(
     <>
+    <br/>
     <Carousel/>
     <Center align='center'>
     <SimpleGrid width={'80%'} margin='auto' padding='20px' columnGap='20px' gridTemplateColumns={['1fr','1fr 1fr','1fr 1fr','1fr 1fr 1fr','1fr 1fr 1fr 1fr','1fr 1fr 1fr 1fr 1fr 1fr']}>
