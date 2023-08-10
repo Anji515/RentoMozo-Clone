@@ -1,7 +1,7 @@
-import Carousel from "../../Components/HomePageComp/Carousel";
 import {Image, Text, SimpleGrid, VStack, Center, GridItem, Grid,Heading, Box, Flex, Button} from '@chakra-ui/react';
 import GridBlurredBackdrop from "./Reviews";
 import {Link as Goto} from 'react-router-dom'
+import Carousel from '../../Components/HomePageComp/Carousel';
 
 function Home(){
 

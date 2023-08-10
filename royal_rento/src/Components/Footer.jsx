@@ -30,7 +30,7 @@ export default function Footer() {
       color={useColorModeValue('gray.700', 'gray.200')}>
       <Container as={Stack} maxW={'6xl'} py={10}>
         <SimpleGrid
-          templateColumns={{ sm: '1fr 1fr', md: '1fr 1fr 1fr 1fr 1fr' }}
+          templateColumns={{ sm: '1fr 1fr', md: '1fr 1fr 1fr 1fr' }}
           width={'100%'}
           spacing={15}>
           <Stack fontFamily={'ABScript'} align={'flex-start'}>
